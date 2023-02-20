@@ -28,24 +28,30 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
   <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
   
-<link rel="stylesheet" href="/css/color-scheme.css">
-<link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/iconfont/iconfont.css">
-<link rel="stylesheet" href="/css/github-markdown.css">
-<link rel="stylesheet" href="/css/highlight.css">
-<link rel="stylesheet" href="/css/comments.css">
+    
+<link rel="stylesheet" href="/css/figcaption/mac-block.css">
 
+  
 
   <!-- jquery3.3.1 -->
-  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+    <script defer type="text/javascript" src="/plugins/jquery.min.js"></script>
+  
 
   <!-- fancybox -->
-  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
-  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  
+    <link href="/plugins/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="/plugins/jquery.fancybox.min.js"></script>
+  
   
 <script src="/js/fancybox.js"></script>
 
+
+  
 
   
 
@@ -56,7 +62,6 @@
       document.documentElement.setAttribute('color-mode', colorMode)
     }
   </script>
-
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 
@@ -104,18 +109,20 @@
         <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
 <!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- LaTex Display -->
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
-<script>
-MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']]
-  }
-};
-</script>
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
 
 
 
@@ -132,16 +139,16 @@ MathJax = {
       <div class="post-title">DC2靶机记录</div>
       <div class="post-attach">
         <span class="post-pubtime">
-          <i class="iconfont icon-updatetime" title="更新时间"></i>
+          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
           2022-02-14 13:42:16
         </span>
         
               <span class="post-tags">
-                <i class="iconfont icon-tags" title="标签"></i>
+                <i class="iconfont icon-tags mr-10" title="标签"></i>
                 
-                <span class="span--tag">
+                <span class="span--tag mr-8">
                   <a href="/tags/WirteUp/" title="WirteUp">
-                    <b>#</b> WirteUp
+                    #WirteUp
                   </a>
                 </span>
                 
@@ -215,16 +222,16 @@ MathJax = {
           </div>
           <div class="post-attach">
             <span class="post-pubtime">
-              <i class="iconfont icon-updatetime" title="更新时间"></i>
+              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
               2022-02-14 13:42:16
             </span>
             
                   <span class="post-tags">
-                    <i class="iconfont icon-tags" title="标签"></i>
+                    <i class="iconfont icon-tags mr-10" title="标签"></i>
                     
-                    <span class="span--tag">
+                    <span class="span--tag mr-8">
                       <a href="/tags/WirteUp/" title="WirteUp">
-                        <b>#</b> WirteUp
+                        #WirteUp
                       </a>
                     </span>
                     
@@ -249,7 +256,9 @@ MathJax = {
   <div class="post-catalog hidden" id="catalog">
     <div class="title">目录</div>
     <div class="catalog-content">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#DC2-%E9%9D%B6%E6%9C%BA%E8%AE%B0%E5%BD%95"><span class="toc-text">DC2 靶机记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E6%9C%BA%E5%8F%91%E7%8E%B0-%E5%86%85%E7%BD%91%E5%85%B6%E4%BB%96%E4%B8%BB%E6%9C%BA%E7%9C%81%E7%95%A5"><span class="toc-text">主机发现 内网其他主机省略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nmap%E6%9F%A5%E7%9C%8B%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF"><span class="toc-text">nmap查看相关信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE80%E7%AB%AF%E5%8F%A3"><span class="toc-text">访问80端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flag1"><span class="toc-text">flag1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E4%BA%86%E5%AF%86%E7%A0%81%E5%B0%9D%E8%AF%95%E4%BD%BF%E7%94%A8wpscan%E6%9F%A5%E6%89%BE%E7%94%A8%E6%88%B7%E5%90%8D"><span class="toc-text">有了密码尝试使用wpscan查找用户名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E7%88%86%E7%A0%B4%E5%AF%86%E7%A0%81-%E6%96%B9%E6%B3%95%E4%B8%8D%E5%94%AF%E4%B8%80-wpscan-burpsuite-hydra"><span class="toc-text">尝试爆破密码(方法不唯一:wpscan&#x2F;burpsuite&#x2F;hydra..)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BB%E6%89%BEflag2"><span class="toc-text">寻找flag2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8tom-amp-jerry%E8%B4%A6%E5%8F%B7%E7%99%BB%E5%BD%95ssh"><span class="toc-text">使用tom&amp;jerry账号登录ssh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ls%E5%8F%91%E7%8E%B0flag3"><span class="toc-text">ls发现flag3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flag3"><span class="toc-text">flag3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flag4"><span class="toc-text">flag4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#final-flag"><span class="toc-text">final_flag</span></a></li></ol></li></ol></li></ol>
+      
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#DC2-%E9%9D%B6%E6%9C%BA%E8%AE%B0%E5%BD%95"><span class="toc-text">DC2 靶机记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E6%9C%BA%E5%8F%91%E7%8E%B0-%E5%86%85%E7%BD%91%E5%85%B6%E4%BB%96%E4%B8%BB%E6%9C%BA%E7%9C%81%E7%95%A5"><span class="toc-text">主机发现 内网其他主机省略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nmap%E6%9F%A5%E7%9C%8B%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF"><span class="toc-text">nmap查看相关信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE80%E7%AB%AF%E5%8F%A3"><span class="toc-text">访问80端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flag1"><span class="toc-text">flag1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E4%BA%86%E5%AF%86%E7%A0%81%E5%B0%9D%E8%AF%95%E4%BD%BF%E7%94%A8wpscan%E6%9F%A5%E6%89%BE%E7%94%A8%E6%88%B7%E5%90%8D"><span class="toc-text">有了密码尝试使用wpscan查找用户名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E7%88%86%E7%A0%B4%E5%AF%86%E7%A0%81-%E6%96%B9%E6%B3%95%E4%B8%8D%E5%94%AF%E4%B8%80-wpscan-burpsuite-hydra"><span class="toc-text">尝试爆破密码(方法不唯一:wpscan&#x2F;burpsuite&#x2F;hydra..)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BB%E6%89%BEflag2"><span class="toc-text">寻找flag2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8tom-amp-jerry%E8%B4%A6%E5%8F%B7%E7%99%BB%E5%BD%95ssh"><span class="toc-text">使用tom&amp;jerry账号登录ssh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ls%E5%8F%91%E7%8E%B0flag3"><span class="toc-text">ls发现flag3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flag3"><span class="toc-text">flag3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flag4"><span class="toc-text">flag4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#final-flag"><span class="toc-text">final_flag</span></a></li></ol></li></ol></li></ol>
+      
     </div>
   </div>
 
@@ -263,7 +272,8 @@ MathJax = {
   </div>
 
 
-        <div class="footer">
+        
+<div class="footer">
   <div class="social">
     <ul>
       
@@ -273,32 +283,23 @@ MathJax = {
           </a>
         </li>
       
-        <li>
-          <a title="wechat" href="">
-            <i class="iconfont icon-wechat"></i>
-          </a>
-        </li>
-      
-        <li>
-          <a title="weibo" href="">
-            <i class="iconfont icon-weibo"></i>
-          </a>
-        </li>
-      
     </ul>
   </div>
   
+    
     <div class="footer-more">
       
         <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Copyright © Oranges 2021</a>
         
     </div>
   
+    
     <div class="footer-more">
       
         <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
         
     </div>
+  
   
 </div>
 

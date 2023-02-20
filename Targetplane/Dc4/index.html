@@ -28,24 +28,30 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
   <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
   
-<link rel="stylesheet" href="/css/color-scheme.css">
-<link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/iconfont/iconfont.css">
-<link rel="stylesheet" href="/css/github-markdown.css">
-<link rel="stylesheet" href="/css/highlight.css">
-<link rel="stylesheet" href="/css/comments.css">
+    
+<link rel="stylesheet" href="/css/figcaption/mac-block.css">
 
+  
 
   <!-- jquery3.3.1 -->
-  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+    <script defer type="text/javascript" src="/plugins/jquery.min.js"></script>
+  
 
   <!-- fancybox -->
-  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
-  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  
+    <link href="/plugins/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="/plugins/jquery.fancybox.min.js"></script>
+  
   
 <script src="/js/fancybox.js"></script>
 
+
+  
 
   
 
@@ -56,7 +62,6 @@
       document.documentElement.setAttribute('color-mode', colorMode)
     }
   </script>
-
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 
@@ -104,18 +109,20 @@
         <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
 <!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- LaTex Display -->
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
-<script>
-MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']]
-  }
-};
-</script>
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
 
 
 
@@ -132,16 +139,16 @@ MathJax = {
       <div class="post-title">DC4靶机记录</div>
       <div class="post-attach">
         <span class="post-pubtime">
-          <i class="iconfont icon-updatetime" title="更新时间"></i>
+          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
           2022-09-13 11:11:11
         </span>
         
               <span class="post-tags">
-                <i class="iconfont icon-tags" title="标签"></i>
+                <i class="iconfont icon-tags mr-10" title="标签"></i>
                 
-                <span class="span--tag">
+                <span class="span--tag mr-8">
                   <a href="/tags/WirteUp/" title="WirteUp">
-                    <b>#</b> WirteUp
+                    #WirteUp
                   </a>
                 </span>
                 
@@ -210,16 +217,16 @@ MathJax = {
           </div>
           <div class="post-attach">
             <span class="post-pubtime">
-              <i class="iconfont icon-updatetime" title="更新时间"></i>
+              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
               2022-09-13 11:11:11
             </span>
             
                   <span class="post-tags">
-                    <i class="iconfont icon-tags" title="标签"></i>
+                    <i class="iconfont icon-tags mr-10" title="标签"></i>
                     
-                    <span class="span--tag">
+                    <span class="span--tag mr-8">
                       <a href="/tags/WirteUp/" title="WirteUp">
-                        <b>#</b> WirteUp
+                        #WirteUp
                       </a>
                     </span>
                     
@@ -244,7 +251,9 @@ MathJax = {
   <div class="post-catalog hidden" id="catalog">
     <div class="title">目录</div>
     <div class="catalog-content">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#DC4-%E9%9D%B6%E6%9C%BA%E8%AE%B0%E5%BD%95"><span class="toc-text">DC4 靶机记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nmap%E6%9F%A5%E7%9C%8B%E4%BF%A1%E6%81%AF"><span class="toc-text">nmap查看信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE80%E7%AB%AF%E5%8F%A3"><span class="toc-text">访问80端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%91%E7%8E%B0command-php%E5%AD%98%E5%9C%A8RCE"><span class="toc-text">发现command.php存在RCE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E6%9C%BA%E7%AB%AF%E7%9B%91%E5%90%AC%E7%AB%AF%E5%8F%A3"><span class="toc-text">攻击机端监听端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E5%8A%9F%E8%BF%9E%E6%8E%A5"><span class="toc-text">成功连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E6%9D%83%E9%99%90"><span class="toc-text">查看当前权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8ls%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95%E4%BF%A1%E6%81%AF"><span class="toc-text">使用ls查看当前目录信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AEpasswd%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E5%AD%98%E5%9C%A8%E5%A4%9A%E4%B8%AA%E7%94%A8%E6%88%B7"><span class="toc-text">访问passwd文件发现存在多个用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5home%E7%9B%AE%E5%BD%95%E5%8F%91%E7%8E%B0%E5%AD%98%E5%9C%A83%E4%B8%AA%E7%94%A8%E6%88%B7"><span class="toc-text">进入home目录发现存在3个用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%88%AB%E8%BF%9B%E5%85%A53%E4%B8%AA%E7%94%A8%E6%88%B7%E7%9B%AE%E5%BD%95%E5%8F%91%E7%8E%B0%E4%BB%85jim%E4%B8%AD%E5%AD%98%E5%9C%A8%E6%96%87%E4%BB%B6"><span class="toc-text">分别进入3个用户目录发现仅jim中存在文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5backups-%E5%8F%91%E7%8E%B0%E5%AD%98%E5%9C%A8%E5%AF%86%E7%A0%81%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6"><span class="toc-text">进入backups 发现存在密码备份文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E4%BD%BF%E7%94%A8%E8%8E%B7%E5%8F%96%E5%88%B0%E7%9A%84%E6%96%87%E4%BB%B6%E8%BF%9B%E8%A1%8Cssh%E7%88%86%E7%A0%B4"><span class="toc-text">尝试使用获取到的文件进行ssh爆破</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E5%8A%9F%E7%88%86%E7%A0%B4%E5%88%B0%E5%AF%86%E7%A0%81"><span class="toc-text">成功爆破到密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8jim%E7%99%BB%E5%BD%95%E5%88%B0%E7%B3%BB%E7%BB%9F"><span class="toc-text">使用jim登录到系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%99%BB%E5%BD%95Charles%E7%94%A8%E6%88%B7"><span class="toc-text">登录Charles用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E6%8F%90%E6%9D%831-teehee%E6%8F%90%E6%9D%83"><span class="toc-text">尝试提权1(teehee提权)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#teehee%E6%88%90%E5%8A%9F%E6%8F%90%E6%9D%83%E8%8E%B7%E5%BE%97root%E6%9D%83%E9%99%90"><span class="toc-text">teehee成功提权获得root权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E6%8F%90%E6%9D%832-exim4%E6%8F%90%E6%9D%83"><span class="toc-text">尝试提权2(exim4提权)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8kali%E6%90%9C%E7%B4%A2exim-%E5%8F%91%E7%8E%B0%E5%AD%98%E5%9C%A8%E4%BB%A5%E4%B8%8B%E5%8F%AF%E5%88%A9%E7%94%A8"><span class="toc-text">使用kali搜索exim,发现存在以下可利用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E5%B0%9D%E8%AF%9546996-sh%E5%8F%AF%E7%94%A8"><span class="toc-text">通过尝试46996.sh可用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E5%8A%9F%E6%8F%90%E6%9D%83"><span class="toc-text">成功提权</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E6%89%BEflag"><span class="toc-text">查找flag</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sum-up"><span class="toc-text">Sum-up</span></a></li></ol></li></ol>
+      
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#DC4-%E9%9D%B6%E6%9C%BA%E8%AE%B0%E5%BD%95"><span class="toc-text">DC4 靶机记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nmap%E6%9F%A5%E7%9C%8B%E4%BF%A1%E6%81%AF"><span class="toc-text">nmap查看信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE80%E7%AB%AF%E5%8F%A3"><span class="toc-text">访问80端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%91%E7%8E%B0command-php%E5%AD%98%E5%9C%A8RCE"><span class="toc-text">发现command.php存在RCE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E6%9C%BA%E7%AB%AF%E7%9B%91%E5%90%AC%E7%AB%AF%E5%8F%A3"><span class="toc-text">攻击机端监听端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E5%8A%9F%E8%BF%9E%E6%8E%A5"><span class="toc-text">成功连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E6%9D%83%E9%99%90"><span class="toc-text">查看当前权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8ls%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95%E4%BF%A1%E6%81%AF"><span class="toc-text">使用ls查看当前目录信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AEpasswd%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E5%AD%98%E5%9C%A8%E5%A4%9A%E4%B8%AA%E7%94%A8%E6%88%B7"><span class="toc-text">访问passwd文件发现存在多个用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5home%E7%9B%AE%E5%BD%95%E5%8F%91%E7%8E%B0%E5%AD%98%E5%9C%A83%E4%B8%AA%E7%94%A8%E6%88%B7"><span class="toc-text">进入home目录发现存在3个用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%88%AB%E8%BF%9B%E5%85%A53%E4%B8%AA%E7%94%A8%E6%88%B7%E7%9B%AE%E5%BD%95%E5%8F%91%E7%8E%B0%E4%BB%85jim%E4%B8%AD%E5%AD%98%E5%9C%A8%E6%96%87%E4%BB%B6"><span class="toc-text">分别进入3个用户目录发现仅jim中存在文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5backups-%E5%8F%91%E7%8E%B0%E5%AD%98%E5%9C%A8%E5%AF%86%E7%A0%81%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6"><span class="toc-text">进入backups 发现存在密码备份文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E4%BD%BF%E7%94%A8%E8%8E%B7%E5%8F%96%E5%88%B0%E7%9A%84%E6%96%87%E4%BB%B6%E8%BF%9B%E8%A1%8Cssh%E7%88%86%E7%A0%B4"><span class="toc-text">尝试使用获取到的文件进行ssh爆破</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E5%8A%9F%E7%88%86%E7%A0%B4%E5%88%B0%E5%AF%86%E7%A0%81"><span class="toc-text">成功爆破到密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8jim%E7%99%BB%E5%BD%95%E5%88%B0%E7%B3%BB%E7%BB%9F"><span class="toc-text">使用jim登录到系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%99%BB%E5%BD%95Charles%E7%94%A8%E6%88%B7"><span class="toc-text">登录Charles用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E6%8F%90%E6%9D%831-teehee%E6%8F%90%E6%9D%83"><span class="toc-text">尝试提权1(teehee提权)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#teehee%E6%88%90%E5%8A%9F%E6%8F%90%E6%9D%83%E8%8E%B7%E5%BE%97root%E6%9D%83%E9%99%90"><span class="toc-text">teehee成功提权获得root权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E6%8F%90%E6%9D%832-exim4%E6%8F%90%E6%9D%83"><span class="toc-text">尝试提权2(exim4提权)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8kali%E6%90%9C%E7%B4%A2exim-%E5%8F%91%E7%8E%B0%E5%AD%98%E5%9C%A8%E4%BB%A5%E4%B8%8B%E5%8F%AF%E5%88%A9%E7%94%A8"><span class="toc-text">使用kali搜索exim,发现存在以下可利用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E5%B0%9D%E8%AF%9546996-sh%E5%8F%AF%E7%94%A8"><span class="toc-text">通过尝试46996.sh可用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E5%8A%9F%E6%8F%90%E6%9D%83"><span class="toc-text">成功提权</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E6%89%BEflag"><span class="toc-text">查找flag</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sum-up"><span class="toc-text">Sum-up</span></a></li></ol></li></ol>
+      
     </div>
   </div>
 
@@ -258,7 +267,8 @@ MathJax = {
   </div>
 
 
-        <div class="footer">
+        
+<div class="footer">
   <div class="social">
     <ul>
       
@@ -268,32 +278,23 @@ MathJax = {
           </a>
         </li>
       
-        <li>
-          <a title="wechat" href="">
-            <i class="iconfont icon-wechat"></i>
-          </a>
-        </li>
-      
-        <li>
-          <a title="weibo" href="">
-            <i class="iconfont icon-weibo"></i>
-          </a>
-        </li>
-      
     </ul>
   </div>
   
+    
     <div class="footer-more">
       
         <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Copyright © Oranges 2021</a>
         
     </div>
   
+    
     <div class="footer-more">
       
         <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
         
     </div>
+  
   
 </div>
 
