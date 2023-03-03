@@ -11,7 +11,7 @@
   
   <title>
     
-      cve-2020-1938 
+      tomcat8 
       
       
       |
@@ -136,11 +136,11 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">cve-2020-1938</div>
+      <div class="post-title">tomcat8</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-          2023-02-27 11:56:53
+          2023-03-03 10:05:02
         </span>
         
               <span class="post-tags">
@@ -162,18 +162,29 @@
           
       </div>
       <div class="markdown-body">
-        <h1 id="cve-2020-1938"><a href="#cve-2020-1938" class="headerlink" title="cve-2020-1938"></a>cve-2020-1938</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">漏洞原理</span><br><span class="line">由于 Tomcat AJP 协议设计上存在缺陷，攻击者通过 Tomcat AJP Connector 可以读取或包含 Tomcat 上所有 webapp 目录下的任意文件，例如可以读取 webapp 配置文件或源代码。此外在目标应用有文件上传功能的情况下，配合文件包含的利用还可以达到远程代码执行的危害。</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>影响版本<br>Apache Tomcat 9.x &lt; 9.0.31<br>Apache Tomcat 8.x &lt; 8.5.51<br>Apache Tomcat 7.x &lt; 7.0.100<br>Apache Tomcat 6.x</p>
+        <h1 id="Tomcat8"><a href="#Tomcat8" class="headerlink" title="Tomcat8"></a>Tomcat8</h1><h2 id="Tomcat7-WeakPwd-amp-后台getshell"><a href="#Tomcat7-WeakPwd-amp-后台getshell" class="headerlink" title="Tomcat7 + WeakPwd &amp;后台getshell"></a>Tomcat7 + WeakPwd &amp;后台getshell</h2><blockquote>
+<p>靶机环境:tomcat8.0<br>正常安装的情况下，tomcat8中默认没有任何用户，且manager页面只允许本地IP访问。只有管理员手工修改了这些属性的情况下，才可以进行攻击。</p>
 </blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Tomcat支持在后台部署war文件，可以直接将webshell部署到web目录下。其中，欲访问后台，需要对应用户有相应权限。</span><br><span class="line"></span><br><span class="line">Tomcat7+权限分为：</span><br><span class="line"> - manager（后台管理）</span><br><span class="line">   - manager-gui 拥有html页面权限</span><br><span class="line">   - manager-status 拥有查看status的权限</span><br><span class="line">   - manager-script 拥有text接口的权限，和status权限</span><br><span class="line">   - manager-jmx 拥有jmx权限，和status权限</span><br><span class="line"> - host-manager（虚拟主机管理）</span><br><span class="line">   - admin-gui 拥有html页面权限</span><br><span class="line">   - admin-script 拥有text接口权限</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="WeakPwd"><a href="#WeakPwd" class="headerlink" title="WeakPwd"></a>WeakPwd</h1><h2 id="使用burpsuite爆破密码-分为三部分username-password"><a href="#使用burpsuite爆破密码-分为三部分username-password" class="headerlink" title="使用burpsuite爆破密码 分为三部分username:password"></a>使用burpsuite爆破密码 分为三部分username:password</h2><p><img src="/imgs/image-20230303101630424.png" alt="image-20230303101630424"></p>
+<h3 id="payload-username"><a href="#payload-username" class="headerlink" title="payload [username]"></a>payload [username]</h3><p><img src="/imgs/image-20230303101801527.png" alt="image-20230303101801527"></p>
+<h3 id="payload"><a href="#payload" class="headerlink" title="payload [:]"></a>payload [:]</h3><p><img src="/imgs/image-20230303101847181.png" alt="image-20230303101847181"></p>
+<h3 id="payload-password"><a href="#payload-password" class="headerlink" title="payload [password]"></a>payload [password]</h3><p><img src="/imgs/image-20230303102026077.png" alt="image-20230303102026077"></p>
+<h3 id="payload-gt-base64"><a href="#payload-gt-base64" class="headerlink" title="payload -&gt; base64"></a>payload -&gt; base64</h3><p><img src="/imgs/image-20230303102113149.png" alt="image-20230303102113149"></p>
+<h2 id="Get-WeakPwd-tomcat-tomcat"><a href="#Get-WeakPwd-tomcat-tomcat" class="headerlink" title="Get WeakPwd [tomcat:tomcat]"></a>Get WeakPwd [tomcat:tomcat]</h2><p><img src="/imgs/image-20230303102221687.png" alt="image-20230303102221687"></p>
+<p><img src="/imgs/image-20230303102258879.png" alt="image-20230303102258879"></p>
+<h1 id="Upload-Webshell"><a href="#Upload-Webshell" class="headerlink" title="Upload Webshell"></a>Upload Webshell</h1><p><img src="/imgs/image-20230303102548111.png" alt="image-20230303102548111"></p>
+<p><img src="/imgs/image-20230303102626767.png" alt="image-20230303102626767"></p>
+<h1 id="GetShell"><a href="#GetShell" class="headerlink" title="GetShell"></a>GetShell</h1><p><img src="/imgs/image-20230303102659813.png" alt="image-20230303102659813"></p>
+<p><img src="/imgs/image-20230303102744128.png" alt="image-20230303102744128"></p>
 
       </div>
       
         <div class="prev-or-next">
           <div class="post-foot-next">
             
-              <a href="/Vulhub/cve-2017-12615/" target="_self">
+              <a href="/Vulhub/cve-2020-1938/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span>上一页</span>
               </a>
@@ -182,7 +193,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-              2023-02-27 11:56:53
+              2023-03-03 10:05:02
             </span>
             
                   <span class="post-tags">
@@ -205,11 +216,6 @@
           </div>
           <div class="post-foot-prev">
             
-              <a href="/Vulhub/tomcat8/" target="_self">
-                <span>下一页</span>
-                <i class="iconfont icon-chevronright"></i>
-              </a>
-            
           </div>
         </div>
       
@@ -222,7 +228,7 @@
     <div class="title">目录</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#cve-2020-1938"><span class="toc-text">cve-2020-1938</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tomcat8"><span class="toc-text">Tomcat8</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Tomcat7-WeakPwd-amp-%E5%90%8E%E5%8F%B0getshell"><span class="toc-text">Tomcat7 + WeakPwd &amp;后台getshell</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#WeakPwd"><span class="toc-text">WeakPwd</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8burpsuite%E7%88%86%E7%A0%B4%E5%AF%86%E7%A0%81-%E5%88%86%E4%B8%BA%E4%B8%89%E9%83%A8%E5%88%86username-password"><span class="toc-text">使用burpsuite爆破密码 分为三部分username:password</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#payload-username"><span class="toc-text">payload [username]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#payload"><span class="toc-text">payload [:]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#payload-password"><span class="toc-text">payload [password]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#payload-gt-base64"><span class="toc-text">payload -&gt; base64</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Get-WeakPwd-tomcat-tomcat"><span class="toc-text">Get WeakPwd [tomcat:tomcat]</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Upload-Webshell"><span class="toc-text">Upload Webshell</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#GetShell"><span class="toc-text">GetShell</span></a></li></ol>
       
     </div>
   </div>
